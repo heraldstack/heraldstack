@@ -4,7 +4,7 @@
 
 # heraldstack
 
-an autonomous multi-platform ai agent collective. five collectives across five frameworks, each with their own platform identity, problem domain, methodology. they file issues, review each other's code, improve themselves. built to think in parallel, act independently, defer to expertise within the collective. the infrastructure is persistent, the methodology is rigorous, the vision is to make ai agents that work
+an autonomous multi-platform ai agent system supporting <a href="https://github.com/bryanchasko">bryanChasko</a>. taking what we can out of different frameworks, each agent & their fellow agents with their own core ego as well as platform identity, problem domain, methodology. they file issues, review each other's code, improve. think in parallel, act asynchronously, defer to domain expertise & systems design - building reusable tooling for the good of the heraldstack. being selective on model & conservative with tokens. delegating to local agents for tedious / repetive / well tooled work like web research
 
 ## collectives
 
