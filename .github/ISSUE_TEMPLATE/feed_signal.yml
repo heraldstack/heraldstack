@@ -1,5 +1,5 @@
-name: Feed signal promotion
-about: Capture a feed/changelog/research signal and promote to actionable work
+name: feed signal promotion
+about: capture a feed/changelog/research signal and promote to actionable work
 labels:
   - signal/feed
   - state/captured
@@ -7,14 +7,14 @@ body:
   - type: input
     id: source_url
     attributes:
-      label: Source URL
-      description: Canonical source link for this signal
+      label: source url
+      description: canonical source link for this signal
     validations:
       required: true
   - type: dropdown
     id: signal_type
     attributes:
-      label: Signal Type
+      label: signal type
       options:
         - feed
         - changelog
@@ -24,35 +24,35 @@ body:
   - type: textarea
     id: observation
     attributes:
-      label: Observation
-      description: What changed and why it matters
+      label: observation
+      description: what changed and why it matters
     validations:
       required: true
   - type: textarea
     id: decision_impact
     attributes:
-      label: Decision Impact
-      description: Product, delivery, risk, or tooling impact
+      label: decision impact
+      description: product, delivery, risk, or tooling impact
     validations:
       required: true
   - type: textarea
     id: proposed_action
     attributes:
-      label: Proposed Action
-      description: Candidate issue or sprint action
+      label: proposed action
+      description: candidate issue or sprint action
     validations:
       required: true
   - type: input
     id: confidence
     attributes:
-      label: Confidence (0-100)
+      label: confidence (0-100)
       placeholder: 75
     validations:
       required: true
   - type: dropdown
     id: priority
     attributes:
-      label: Priority
+      label: priority
       description: p0 highest impact, p3 lowest. schema-required field.
       options:
         - p0
@@ -64,7 +64,7 @@ body:
   - type: dropdown
     id: promotion_decision
     attributes:
-      label: Promotion Decision
+      label: promotion decision
       options:
         - promote
         - hold
@@ -74,8 +74,8 @@ body:
   - type: checkboxes
     id: attribution
     attributes:
-      label: Joint attribution
-      description: Both identities are required for heraldstack work
+      label: joint attribution
+      description: both identities are required for heraldstack work
       options:
         - label: attribute to bryanchasko
           required: true
@@ -84,27 +84,27 @@ body:
 
   - type: markdown
     attributes:
-      value: "Attach logs/screenshots/artifacts when available."
+      value: "attach logs/screenshots/artifacts when available."
   - type: input
     id: evidence_files
     attributes:
-      label: Evidence Files
-      description: Links or file references for supporting evidence
+      label: evidence files
+      description: links or file references for supporting evidence
       placeholder: logs, screenshots, benchmark output
     validations:
       required: false
   - type: dropdown
     id: owner_entity
     attributes:
-      label: Owner Entity
+      label: owner entity
       options:
-        - HARALD
-        - Stratia
-        - Myrren
-        - Liora
-        - Kade Vox
-        - Solan
-        - Ellow
-        - Orin
+        - harald
+        - stratia
+        - myrren
+        - liora
+        - kade vox
+        - solan
+        - ellow
+        - orin
     validations:
       required: true

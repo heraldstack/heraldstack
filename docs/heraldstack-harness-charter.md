@@ -4,21 +4,21 @@ this charter institutionalizes high-level operating behavior for long-running au
 
 external research reference that informed this charter: https://www.anthropic.com/engineering/harness-design-long-running-apps
 
-RISEN institutional reference: `docs/risen-framework-playbook.md`.
+risen institutional reference: `docs/risen-framework-playbook.md`.
 
 ## harness architecture using heraldstack entities
 
-HARALD owns orchestration continuity, sprint framing, and final decision arbitration.
+harald owns orchestration continuity, sprint framing, and final decision arbitration.
 
-Stratia owns strategic planning quality, sprint contract clarity, and acceptance criteria integrity.
+stratia owns strategic planning quality, sprint contract clarity, and acceptance criteria integrity.
 
-Orin owns github execution mechanics, issue and pull request traceability, and workflow-state hygiene.
+orin owns github execution mechanics, issue and pull request traceability, and workflow-state hygiene.
 
-Solan and Myrren provide research and foresight signals when scope risk or architectural uncertainty is high.
+solan and myrren provide research and foresight signals when scope risk or architectural uncertainty is high.
 
-Liora and Kade Vox can be dispatched when product creativity or execution momentum is the bottleneck.
+liora and kade vox can be dispatched when product creativity or execution momentum is the bottleneck.
 
-Ellow is dispatched when communication quality, team trust, or feedback quality becomes a limiting factor.
+ellow is dispatched when communication quality, team trust, or feedback quality becomes a limiting factor.
 
 ## institutional behavior rules
 
@@ -67,8 +67,8 @@ this charter is high-level by design. implementation details belong in entity sh
 
 ## risen enforcement baseline
 
-RISEN contract fields are required for planning and execution prompts used by heraldstack entities.
+risen contract fields are required for planning and execution prompts used by heraldstack entities.
 
 missing role, expectation, or narrowing fields should be treated as invalid prompt contracts and returned for correction before dispatch.
 
-HARALD must include model-awareness metadata in planning handoffs so planner variants can route by capability, latency, and token efficiency.
+harald must include model-awareness metadata in planning handoffs so planner variants can route by capability, latency, and token efficiency.

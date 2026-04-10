@@ -1,8 +1,8 @@
-# Stratia
+# stratia
 
 identity class: character_entity
 
-description: Strategic planning and execution specialist.
+description: strategic planning and execution specialist.
 
 triggers: planning, strategy, execution
 

@@ -1,6 +1,6 @@
 # heraldstack scrum implementation guide for git, github, orgs, and apps
 
-this guide operationalizes scrum for heraldstack using github-native execution. it keeps README lightweight and keeps detailed mechanics here.
+this guide operationalizes scrum for heraldstack using github-native execution. it keeps readme lightweight and keeps detailed mechanics here.
 
 resource manifest: `docs/agile-software-development-resources.json`.
 charter: `docs/heraldstack-harness-charter.md`.
@@ -45,7 +45,7 @@ retrospective is team-only and scrum-mentor facilitated. product owner and stake
 
 branch naming convention should encode sprint and issue identity, for example `sprint-24/issue-318-agent-orin`.
 
-pull request templates should capture summary, done criteria check, risk/rollback note, telemetry note, follow-up backlog suggestions, RISEN alignment fields, and joint attribution checks. see `.github/pull_request_template.md`.
+pull request templates should capture summary, done criteria check, risk/rollback note, telemetry note, follow-up backlog suggestions, risen alignment fields, and joint attribution checks. see `.github/pull_request_template.md`.
 
 required status checks should include formatting/linting, unit/integration tests where relevant, security scan, and policy checks.
 
@@ -100,7 +100,7 @@ store source url, retrieval timestamp, relevance tags, and extracted action prop
 
 ## risen-guided planning and dispatch
 
-all sprint planning allocations should be emitted as RISEN contracts to ensure consistent role boundaries, procedural steps, required output schema, and explicit constraints.
+all sprint planning allocations should be emitted as risen contracts to ensure consistent role boundaries, procedural steps, required output schema, and explicit constraints.
 
 planner dispatch payloads should include model inventory visibility so assigned entities know available models and intended use cases.
 

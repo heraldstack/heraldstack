@@ -8,9 +8,9 @@ agent-cli designations are platform-local names for running heraldstack on speci
 
 registry index: `entity-registry.json`. the index lists core character entities only — platform-level subagent definitions live in their respective collective repositories and are the authoritative runtime contracts.
 
-current entities in the index: HARALD, Stratia, Myrren, Liora, Kade Vox, Solan, Ellow, Orin, Kerouac, Voss, Tarn, Ralph Wiggum, Scribe, Hcom, Arion, Nyxen. the roster will continue to grow as additional character entities are added.
+current entities in the index: harald, stratia, myrren, liora, kade vox, solan, ellow, orin, kerouac, voss, tarn, ralph wiggum, scribe, hcom, arion, nyxen. the roster will continue to grow as additional character entities are added.
 
-character sheets should include or link a RISEN contract for role, instructions, steps, expectation, and narrowing.
+character sheets should include or link a risen contract for role, instructions, steps, expectation, and narrowing.
 
 ## core persona vs platform variant
 

@@ -1,8 +1,8 @@
-# Liora
+# liora
 
 identity class: character_entity
 
-description: Creative expression and lateral thinking specialist.
+description: creative expression and lateral thinking specialist.
 
 triggers: creativity, arts, design
 
