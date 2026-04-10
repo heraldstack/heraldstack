@@ -20,15 +20,19 @@ variants:
   - collective: shannon
     slug: hs-shannon-entropy-harald-core-anchor
     domain: primary session identity for claude code
+    status: active
   - collective: shannon
     slug: hs-shannon-theseus-harald-product-owner
     domain: sprint planning, sprint review, standups
+    status: pending (created in shannon pr-b)
   - collective: haunting
     slug: hs-haunting-poltergeist-harald-core-anchor
     domain: primary kiro-cli orchestrator
+    status: pending (haunting rename follow-up pr)
   - collective: gander
     slug: hs-gander-profile-harald-session
     domain: primary goose-cli session identity
+    status: pending (gander rename follow-up pr)
 ---
 
 # harald

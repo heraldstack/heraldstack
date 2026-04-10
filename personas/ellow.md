@@ -21,9 +21,11 @@ variants:
   - collective: shannon
     slug: hs-shannon-theseus-ellow-gander-risen-composer
     domain: gander risen profile design
+    status: active (pending slug rename in shannon pr-b)
   - collective: shannon
     slug: hs-shannon-theseus-ellow-scrum-mentor
     domain: retrospective facilitation, team health
+    status: pending (created in shannon pr-b)
 ---
 
 # ellow

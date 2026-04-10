@@ -49,6 +49,9 @@ canonical character identity. variant duty lives in collective repos.
 
 ## collective repos
 
-- shannon (claude code): github.com/bryanchasko/shannon-claude-code-cli
-- haunting (kiro): github.com/bryanchasko/haunting-kiro-cli
-- gander (goose): github.com/bryanchasko/gander-goose-cli
+- shannon (claude code): github.com/BryanChasko/shannon-claude-code-cli
+- haunting (kiro): github.com/BryanChasko/haunting-kiro-cli
+- gander (goose): github.com/BryanChasko/gander-goose-cli
+- ibeji (gemini cli): github.com/BryanChasko/ibeji-gemini-cli
+- splintercells (langchain deepagents): github.com/BryanChasko/splintercells-deep-agents-cli
+- squad (github copilot): github.com/chasko-labs/squadron-github-copilot-cli
