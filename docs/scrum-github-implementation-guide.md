@@ -117,7 +117,7 @@ joint attribution policy requires both bryanchasko and heraldstack on feed-promo
 
 ## user research and usability standards integration
 
-for ux-impacting backlog items, include user-research method tag and evidence summary before scheduling work.
+for ux-sensitive backlog items, include user-research method tag and evidence summary before scheduling work.
 
 preferred methods are interview, survey, usability-test, heuristic-review, analytics-trace, field-observation, and comparative-benchmark.
 

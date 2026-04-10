@@ -32,7 +32,7 @@ all sprint reviews should include a user-experience evidence segment with artifa
 
 retrospectives should capture one user-experience process improvement candidate and one measurement-improvement candidate each sprint.
 
-## required sprint artifacts for ux-impacting work
+## required sprint artifacts for ux-sensitive work
 
 planning artifact must include user problem statement, user segment, method selection, sample size target, and expected confidence threshold.
 
