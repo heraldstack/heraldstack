@@ -1,0 +1,286 @@
+{
+  "last_updated_utc": "2026-04-09",
+  "scope": "heraldstack agile software development resources",
+  "canonical_references": [
+    {
+      "name": "Manifesto for Agile Software Development",
+      "url": "https://agilemanifesto.org/",
+      "why": "Primary source for Agile values and principles"
+    },
+    {
+      "name": "The Scrum Guide",
+      "url": "https://scrumguides.org/scrum-guide.html",
+      "why": "Official Scrum definition by Ken Schwaber and Jeff Sutherland"
+    },
+    {
+      "name": "Scrum.org Resource Center",
+      "url": "https://www.scrum.org/resource-center",
+      "why": "Ongoing practitioner guidance and evidence-based Scrum material"
+    },
+    {
+      "name": "Agile Alliance Resource Library",
+      "url": "https://agilealliance.org/resources/",
+      "why": "Community-backed Agile practices and references"
+    },
+    {
+      "name": "LeSS Framework",
+      "url": "https://less.works/",
+      "why": "Large-scale product development practices grounded in Scrum"
+    }
+  ],
+  "mentors_and_inspirations": [
+    {
+      "name": "Ken Schwaber",
+      "focus": "Scrum co-creator",
+      "reference": "https://scrumguides.org/"
+    },
+    {
+      "name": "Jeff Sutherland",
+      "focus": "Scrum co-creator",
+      "reference": "https://scrumguides.org/"
+    },
+    {
+      "name": "Dave West",
+      "focus": "Product and Scrum leadership",
+      "reference": "https://www.scrum.org/resources"
+    },
+    {
+      "name": "Martin Fowler",
+      "focus": "Agile architecture and software design",
+      "reference": "https://martinfowler.com/"
+    },
+    {
+      "name": "Gene Gendel",
+      "focus": "Product operating models and LeSS",
+      "reference": "https://less.works/blog"
+    }
+  ],
+  "active_living_learning_feeds": [
+    {
+      "name": "Scrum.org blog feed",
+      "feed_url": "https://www.scrum.org/resources/blog/rss.xml",
+      "category": "scrum"
+    },
+    {
+      "name": "LeSS blog feed",
+      "feed_url": "https://less.works/blog/feed.xml",
+      "category": "scaled_scrum"
+    },
+    {
+      "name": "InfoQ feed (Agile page links here)",
+      "feed_url": "https://feed.infoq.com/",
+      "category": "engineering_and_agile"
+    },
+    {
+      "name": "Martin Fowler feed",
+      "feed_url": "https://martinfowler.com/feed.atom",
+      "category": "architecture_and_agile"
+    },
+    {
+      "name": "GitHub releases feed pattern",
+      "feed_url": "https://github.com/<owner>/<repo>/releases.atom",
+      "category": "toolchain_updates"
+    }
+  ],
+  "mcp_integration_patterns": [
+    {
+      "name": "rss-ingestion-mcp",
+      "goal": "ingest feed entries into qdrant and valkey",
+      "inputs": [
+        "feed_url",
+        "poll_interval_minutes",
+        "dedupe_key"
+      ],
+      "outputs": [
+        "new_entries",
+        "topic_tags",
+        "action_candidates"
+      ]
+    },
+    {
+      "name": "github-backlog-sync-mcp",
+      "goal": "turn learning signals into issues or sprint notes",
+      "inputs": [
+        "repository",
+        "labels",
+        "owner"
+      ],
+      "outputs": [
+        "issue_drafts",
+        "retro_candidates",
+        "dependency_alerts"
+      ]
+    },
+    {
+      "name": "sprint-intel-brief-mcp",
+      "goal": "produce planning brief before sprint planning",
+      "inputs": [
+        "open_issues",
+        "recent_prs",
+        "feed_digest",
+        "otel_signals"
+      ],
+      "outputs": [
+        "top_10_planner_candidates",
+        "confidence_risks",
+        "impediment_hypotheses"
+      ]
+    }
+  ],
+  "operating_policies": {
+    "anti_patterns_to_avoid": [
+      "waterfall phase-gates masquerading as scrum",
+      "upfront estimate theater before measurement maturity",
+      "stale specs treated as contracts"
+    ],
+    "evidence_policy": "build_experiment_measure",
+    "forecasting_policy": "predictive modeling only after at least 12 comparable sprints"
+  },
+  "github_workflow_references": [
+    {
+      "name": "GitHub Issues",
+      "url": "https://docs.github.com/issues",
+      "why": "Backlog item tracking and workflow states"
+    },
+    {
+      "name": "GitHub Projects",
+      "url": "https://docs.github.com/issues/planning-and-tracking-with-projects",
+      "why": "Sprint board, iteration fields, and cross-repo planning"
+    },
+    {
+      "name": "GitHub Pull Requests",
+      "url": "https://docs.github.com/pull-requests",
+      "why": "Review, merge controls, and traceability to backlog"
+    },
+    {
+      "name": "GitHub Actions",
+      "url": "https://docs.github.com/actions",
+      "why": "CI/CD policy checks and automation pipelines"
+    },
+    {
+      "name": "GitHub Organizations",
+      "url": "https://docs.github.com/organizations",
+      "why": "Org-wide governance, roles, and standards"
+    },
+    {
+      "name": "GitHub Apps",
+      "url": "https://docs.github.com/apps",
+      "why": "Event-driven orchestration and integration points"
+    }
+  ],
+  "github_app_event_targets": [
+    "issues",
+    "issue_comment",
+    "pull_request",
+    "pull_request_review",
+    "workflow_run",
+    "check_suite"
+  ],
+  "sprint_metrics_core": [
+    "throughput",
+    "cycle_time",
+    "blocked_time",
+    "review_latency",
+    "escaped_defects",
+    "confidence_delta"
+  ],
+  "sprint_metrics_efficiency": [
+    "token_efficiency",
+    "parallel_dispatch_width",
+    "mcp_call_success_rate",
+    "otel_trace_completeness"
+  ],
+  "identity_model_references": [
+    {
+      "name": "Heraldstack character registry",
+      "path": "docs/character-sheets/entity-registry.json",
+      "purpose": "separate character entities from agent-cli designations"
+    }
+  ],
+  "risen_framework_references": [
+    {
+      "name": "RISEN framework article",
+      "url": "https://www.anthropic.com/engineering/harness-design-long-running-apps",
+      "why": "Structured behavioral contracts for long-running agent workflows"
+    },
+    {
+      "name": "ServiceNow community AI resources",
+      "url": "https://communityresources.service-now.com/ai",
+      "why": "Operational AI implementation references and community patterns"
+    }
+  ],
+  "github_projects_and_pr_references": [
+    {
+      "name": "GitHub Projects overview",
+      "url": "https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects",
+      "why": "Project planning primitives for backlog and sprint tracking"
+    },
+    {
+      "name": "GitHub changelog: evolving issues and projects",
+      "url": "https://github.blog/changelog/2025-04-09-evolving-github-issues-and-projects/",
+      "why": "Recent platform capabilities for issues/projects workflows"
+    },
+    {
+      "name": "Implementing Scrum with GitHub Projects",
+      "url": "https://www.scrum.org/resources/implementing-scrum-github-projects",
+      "why": "Scrum-specific guidance for GitHub-based execution"
+    },
+    {
+      "name": "GitHub Issues feature page",
+      "url": "https://github.com/features/issues",
+      "why": "Issue management features and adoption context"
+    },
+    {
+      "name": "PR etiquette discussion",
+      "url": "https://stackoverflow.com/questions/9563881/etiquette-of-github-contributing-pull-requests-vs-new-issue",
+      "why": "Community norms for issue vs pull-request initiation"
+    }
+  ],
+  "local_operational_artifacts": [
+    {
+      "path": "specs/ingestion-pipeline-spec.md",
+      "purpose": "Signal ingestion, promotion flow, labels, and project mapping"
+    },
+    {
+      "path": "specs/promotion-criteria.schema.json",
+      "purpose": "Schema gating for promote/hold/archive decisions"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/feed_signal.yml",
+      "purpose": "Standard issue form for feed/changelog signal capture"
+    },
+    {
+      "path": ".github/config/project-fields.json",
+      "purpose": "Projects field contract for chasko-labs board state sync"
+    },
+    {
+      "path": ".github/config/check-gates.md",
+      "purpose": "Branch check gate baseline and attribution policy"
+    },
+    {
+      "path": ".github/config/webhook-events.json",
+      "purpose": "Webhook events and handler mapping contract"
+    },
+    {
+      "path": "docs/trends-2026-decomposition.md",
+      "purpose": "Tracks 2026 trend decomposition and repo responses"
+    }
+  ],
+  "trends_2026_focus": [
+    {
+      "topic": "github projects and issues evolution",
+      "source": "https://github.blog/changelog/2025-04-09-evolving-github-issues-and-projects/",
+      "repo_response": "standardized promotion state/field contracts"
+    },
+    {
+      "topic": "long-running harness reliability",
+      "source": "https://www.anthropic.com/engineering/harness-design-long-running-apps",
+      "repo_response": "RISEN contracts and harness charter"
+    },
+    {
+      "topic": "scrum on github implementation",
+      "source": "https://www.scrum.org/resources/implementing-scrum-github-projects",
+      "repo_response": "scrum-github implementation guide and issue/project mappings"
+    }
+  ]
+}

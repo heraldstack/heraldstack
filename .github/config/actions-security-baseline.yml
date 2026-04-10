@@ -1,0 +1,26 @@
+name: actions-security-baseline
+
+requirements:
+  pin_actions_by_sha: true
+  restrict_third_party_actions: true
+  require_minimal_permissions: true
+  require_oidc_for_cloud_auth: true
+  block_plaintext_long_lived_cloud_keys: true
+
+runner_policy:
+  github_hosted_allowed: true
+  self_hosted_allowed: true
+  self_hosted_min_runner_version: "2.329.0"
+
+oidc_policy:
+  require_audience_binding: true
+  require_repository_binding: true
+  recommend_custom_claims_and_properties: true
+
+artifact_policy:
+  retain_validation_artifacts_days: 30
+  require_checksum_for_release_assets: true
+
+review_policy:
+  required_reviewers_for_workflow_changes: 2
+  require_bryanchasko_and_heraldstack_attribution: true

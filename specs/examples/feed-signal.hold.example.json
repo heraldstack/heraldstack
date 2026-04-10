@@ -1,0 +1,27 @@
+{
+  "source_url": "https://www.scrum.org/resources/implementing-scrum-github-projects",
+  "signal_type": "research",
+  "observation": "Scrum GitHub implementation guidance may inform backlog hygiene and issue state transitions.",
+  "decision_impact": "Potential process improvements exist but require cross-team review before near-term sprint adoption.",
+  "proposed_action": "Create a triage issue and hold promotion pending review during the next retrospective session.",
+  "confidence": 64,
+  "priority": "p2",
+  "promotion_decision": "hold",
+  "attribution": {
+    "bryanchasko": true,
+    "heraldstack": true
+  },
+  "labels": [
+    "signal/research",
+    "state/triaged",
+    "priority/p2"
+  ],
+  "project_fields": {
+    "Signal Source": "research",
+    "Signal Confidence": 64,
+    "Promotion Decision": "hold",
+    "Sprint Fit": "later",
+    "Owner Entity": "Stratia",
+    "Attribution": "bryanchasko+heraldstack"
+  }
+}

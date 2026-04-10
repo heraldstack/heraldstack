@@ -1,0 +1,34 @@
+name: docs-schema-validate
+
+on:
+  pull_request:
+    paths:
+      - "specs/promotion-criteria.schema.json"
+      - ".github/ISSUE_TEMPLATE/feed_signal.yml"
+      - ".github/config/**"
+      - ".github/config/actions-security-baseline.yml"
+      - "specs/**"
+      - "scripts/validate_promotion_payload.py"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate promotion criteria JSON schema syntax
+        run: python -m json.tool specs/promotion-criteria.schema.json >/dev/null
+      - name: Validate project fields JSON syntax
+        run: python -m json.tool .github/config/project-fields.json >/dev/null
+      - name: Validate webhook events JSON syntax
+        run: python -m json.tool .github/config/webhook-events.json >/dev/null
+
+      - name: Validate promotion payload examples
+        run: |
+          python scripts/validate_promotion_payload.py specs/examples/feed-signal.promote.example.json
+          python scripts/validate_promotion_payload.py specs/examples/feed-signal.hold.example.json
+
+      - name: Ensure security baseline file exists
+        run: test -f .github/config/actions-security-baseline.yml

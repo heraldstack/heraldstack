@@ -1,0 +1,19 @@
+{
+  "name": "heraldstack-feed-and-project-sync",
+  "events": [
+    "issues",
+    "issue_comment",
+    "pull_request",
+    "pull_request_review",
+    "projects_v2_item",
+    "workflow_run"
+  ],
+  "handlers": {
+    "issues.opened": "validate_feed_signal_and_labels",
+    "issues.edited": "recompute_promotion_state",
+    "projects_v2_item.edited": "sync_issue_state_labels",
+    "pull_request.opened": "enforce_joint_attribution",
+    "pull_request_review.submitted": "record_reviewer_lane",
+    "workflow_run.completed": "update_project_gate_status"
+  }
+}

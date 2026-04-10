@@ -1,0 +1,98 @@
+name: Feed signal promotion
+about: Capture a feed/changelog/research signal and promote to actionable work
+labels:
+  - signal/feed
+  - state/captured
+body:
+  - type: input
+    id: source_url
+    attributes:
+      label: Source URL
+      description: Canonical source link for this signal
+    validations:
+      required: true
+  - type: dropdown
+    id: signal_type
+    attributes:
+      label: Signal Type
+      options:
+        - feed
+        - changelog
+        - research
+    validations:
+      required: true
+  - type: textarea
+    id: observation
+    attributes:
+      label: Observation
+      description: What changed and why it matters
+    validations:
+      required: true
+  - type: textarea
+    id: decision_impact
+    attributes:
+      label: Decision Impact
+      description: Product, delivery, risk, or tooling impact
+    validations:
+      required: true
+  - type: textarea
+    id: proposed_action
+    attributes:
+      label: Proposed Action
+      description: Candidate issue or sprint action
+    validations:
+      required: true
+  - type: input
+    id: confidence
+    attributes:
+      label: Confidence (0-100)
+      placeholder: 75
+    validations:
+      required: true
+  - type: dropdown
+    id: promotion_decision
+    attributes:
+      label: Promotion Decision
+      options:
+        - promote
+        - hold
+        - archive
+    validations:
+      required: true
+  - type: checkboxes
+    id: attribution
+    attributes:
+      label: Joint attribution
+      description: Both identities are required for heraldstack work in chasko-labs
+      options:
+        - label: attribute to bryanchasko
+          required: true
+        - label: attribute to heraldstack
+          required: true
+
+  - type: markdown
+    attributes:
+      value: "Attach logs/screenshots/artifacts when available."
+  - type: input
+    id: evidence_files
+    attributes:
+      label: Evidence Files
+      description: Links or file references for supporting evidence
+      placeholder: logs, screenshots, benchmark output
+    validations:
+      required: false
+  - type: dropdown
+    id: owner_entity
+    attributes:
+      label: Owner Entity
+      options:
+        - HARALD
+        - Stratia
+        - Myrren
+        - Liora
+        - Kade Vox
+        - Solan
+        - Ellow
+        - Orin
+    validations:
+      required: true

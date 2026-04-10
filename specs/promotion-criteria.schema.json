@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://heraldstack.local/specs/promotion-criteria.schema.json",
+  "title": "Heraldstack Feed Signal Promotion Criteria",
+  "type": "object",
+  "required": [
+    "source_url",
+    "signal_type",
+    "observation",
+    "decision_impact",
+    "proposed_action",
+    "confidence",
+    "priority",
+    "promotion_decision",
+    "attribution",
+    "labels",
+    "project_fields"
+  ],
+  "properties": {
+    "source_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "signal_type": {
+      "type": "string",
+      "enum": ["feed", "changelog", "research"]
+    },
+    "observation": {
+      "type": "string",
+      "minLength": 20
+    },
+    "decision_impact": {
+      "type": "string",
+      "minLength": 20
+    },
+    "proposed_action": {
+      "type": "string",
+      "minLength": 20
+    },
+    "confidence": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "priority": {
+      "type": "string",
+      "enum": ["p0", "p1", "p2", "p3"]
+    },
+    "promotion_decision": {
+      "type": "string",
+      "enum": ["promote", "hold", "archive"]
+    },
+    "attribution": {
+      "type": "object",
+      "required": ["bryanchasko", "heraldstack"],
+      "properties": {
+        "bryanchasko": {"type": "boolean", "const": true},
+        "heraldstack": {"type": "boolean", "const": true}
+      },
+      "additionalProperties": false
+    },
+    "labels": {
+      "type": "array",
+      "minItems": 3,
+      "items": {"type": "string"},
+      "allOf": [
+        {"contains": {"const": "signal/feed"}},
+        {"contains": {"pattern": "^state/"}},
+        {"contains": {"pattern": "^priority/"}}
+      ]
+    },
+    "project_fields": {
+      "type": "object",
+      "required": ["Signal Source", "Signal Confidence", "Promotion Decision", "Sprint Fit", "Owner Entity", "Attribution"],
+      "properties": {
+        "Signal Source": {"type": "string", "enum": ["feed", "changelog", "research"]},
+        "Signal Confidence": {"type": "integer", "minimum": 0, "maximum": 100},
+        "Promotion Decision": {"type": "string", "enum": ["promote", "hold", "archive"]},
+        "Sprint Fit": {"type": "string", "enum": ["now", "next", "later"]},
+        "Owner Entity": {"type": "string", "enum": ["HARALD", "Stratia", "Myrren", "Liora", "Kade Vox", "Solan", "Ellow", "Orin"]},
+        "Attribution": {"type": "string", "const": "bryanchasko+heraldstack"}
+      },
+      "additionalProperties": true
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"promotion_decision": {"const": "promote"}}},
+      "then": {"properties": {"confidence": {"minimum": 70}}}
+    }
+  ],
+  "additionalProperties": true
+}
