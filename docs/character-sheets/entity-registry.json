@@ -1,6 +1,6 @@
 {
-  "version": "0.2.0",
-  "updated_utc": "2026-04-09",
+  "version": "0.3.0",
+  "updated_utc": "2026-04-10",
   "taxonomy": {
     "character_entity": "persistent product-role identity used in orchestration",
     "agent_cli_designation": "local name used for heraldstack instance on a CLI platform"
@@ -109,9 +109,115 @@
         "problems"
       ],
       "sheet": "docs/character-sheets/orin.md"
+    },
+    {
+      "id": "kerouac",
+      "display_name": "Kerouac",
+      "role": "source_research_writing",
+      "description": "Source research and writing specialist. Converts feeds, docs, and open-ended research briefs into structured, attributed findings.",
+      "triggers": [
+        "research",
+        "source-material",
+        "feeds",
+        "writing"
+      ],
+      "sheet": "docs/character-sheets/kerouac.md"
+    },
+    {
+      "id": "voss",
+      "display_name": "Voss",
+      "role": "authoring_technical_writing",
+      "description": "Authoring and technical writing specialist. Owns long-form narrative, steering documents, and structure-first composition.",
+      "triggers": [
+        "authoring",
+        "documentation",
+        "technical-writing",
+        "narrative"
+      ],
+      "sheet": "docs/character-sheets/voss.md"
+    },
+    {
+      "id": "tarn",
+      "display_name": "Tarn",
+      "role": "infrastructure_integration_forge",
+      "description": "Infrastructure forge specialist. Designs and wires platform integrations, service launchers, and cross-tool bridges.",
+      "triggers": [
+        "infrastructure",
+        "integration-wiring",
+        "platform-forge"
+      ],
+      "sheet": "docs/character-sheets/tarn.md"
+    },
+    {
+      "id": "ralph-wiggum",
+      "display_name": "Ralph Wiggum",
+      "role": "qa_logic_critic",
+      "description": "Quality assurance and logic critic. Catches edge cases, validates contracts, and questions assumptions the team took for granted.",
+      "triggers": [
+        "qa",
+        "logic-validation",
+        "edge-cases",
+        "contract-check"
+      ],
+      "sheet": "docs/character-sheets/ralph-wiggum.md"
+    },
+    {
+      "id": "scribe",
+      "display_name": "Scribe",
+      "role": "source_style_analysis",
+      "description": "Source analysis and writing standards specialist. Enforces voice, style, and publication readiness across long-form output.",
+      "triggers": [
+        "style-review",
+        "source-analysis",
+        "writing-standards",
+        "publication-readiness"
+      ],
+      "sheet": "docs/character-sheets/scribe.md"
+    },
+    {
+      "id": "hcom",
+      "display_name": "Hcom",
+      "role": "contextual_bridge_relay",
+      "description": "Contextual bridge and relay specialist. Owns cross-machine sync, integration relays, and API glue between distributed components.",
+      "triggers": [
+        "context-sync",
+        "cross-machine",
+        "integration-relay",
+        "api-glue"
+      ],
+      "sheet": "docs/character-sheets/hcom.md"
+    },
+    {
+      "id": "arion",
+      "display_name": "Arion",
+      "role": "cognitive_loop_resolution",
+      "description": "Cognitive and emotional loop resolver. Dispatched when thought loops, recursive failure, or team frustration become the limiting factor.",
+      "triggers": [
+        "loop-detection",
+        "cognitive-reset",
+        "emotional-unblock"
+      ],
+      "sheet": "docs/character-sheets/arion.md"
+    },
+    {
+      "id": "nyxen",
+      "display_name": "Nyxen",
+      "role": "abstract_lateral_reasoning",
+      "description": "Abstract and non-linear problem specialist. Reframes problems laterally when sequential approaches stall.",
+      "triggers": [
+        "abstract-reasoning",
+        "non-linear",
+        "lateral-reframe"
+      ],
+      "sheet": "docs/character-sheets/nyxen.md"
     }
   ],
-  "coverage_note": "character_entities listed here represent core product-level personas only. platform-level subagent definitions (shannon theseus agents, haunting ghosts, gander goose profiles) live in their respective collective repositories and are the authoritative runtime contracts. this registry is not a substitute for those definitions.",
+  "coverage_note": "character_entities listed here represent core product-level personas only. each character can anchor multiple platform-level variants via the slug pattern <agent-type>-<persona>-<domain>-<role>. platform-level subagent definitions (shannon theseus agents, haunting poltergeists and ghosts, gander goose profiles) live in their respective collective repositories and are the authoritative runtime contracts for each variant. this registry captures identity, not duty.",
+  "variant_model": {
+    "pattern": "<agent-type>-<persona>-<domain>-<role>",
+    "explanation": "a persona is the character's soul. a variant is a specific deployment of that soul in an agent-type + domain + role. one character can anchor many variants across collectives. the character sheet describes who the persona is; the per-collective slug describes what a given variant does.",
+    "example": "persona 'orin' (technical problem-solving, systems thinking) anchors variants such as github execution, ci/cd operations, and release management in different collectives."
+  },
   "status": {
     "source_alignment": "seeded from public persona buildout",
     "next_sync_target": "heraldstack organizational sync (placeholder)"
