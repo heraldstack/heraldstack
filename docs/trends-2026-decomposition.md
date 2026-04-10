@@ -22,7 +22,7 @@ repo implementation: `.github/config/actions-security-baseline.yml` and workflow
 
 ## trend: structured agent prompt contracts for reliability
 
-decomposition: RISEN fields become default planning and dispatch contract, including role boundaries and explicit narrowing.
+decomposition: risen fields become default planning and dispatch contract, including role boundaries and explicit narrowing.
 
 repo implementation: `docs/risen-framework-playbook.md`, `docs/heraldstack-harness-charter.md`, `docs/scrum-github-implementation-guide.md`.
 

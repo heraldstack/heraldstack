@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://heraldstack.local/specs/promotion-criteria.schema.json",
-  "title": "Heraldstack Feed Signal Promotion Criteria",
+  "title": "heraldstack feed signal promotion criteria",
   "type": "object",
   "required": [
     "source_url",
@@ -71,14 +71,14 @@
     },
     "project_fields": {
       "type": "object",
-      "required": ["Signal Source", "Signal Confidence", "Promotion Decision", "Sprint Fit", "Owner Entity", "Attribution"],
+      "required": ["signal source", "signal confidence", "promotion decision", "sprint fit", "owner entity", "attribution"],
       "properties": {
-        "Signal Source": {"type": "string", "enum": ["feed", "changelog", "research"]},
-        "Signal Confidence": {"type": "integer", "minimum": 0, "maximum": 100},
-        "Promotion Decision": {"type": "string", "enum": ["promote", "hold", "archive"]},
-        "Sprint Fit": {"type": "string", "enum": ["now", "next", "later"]},
-        "Owner Entity": {"type": "string", "enum": ["HARALD", "Stratia", "Myrren", "Liora", "Kade Vox", "Solan", "Ellow", "Orin"]},
-        "Attribution": {"type": "string", "const": "bryanchasko+heraldstack"}
+        "signal source": {"type": "string", "enum": ["feed", "changelog", "research"]},
+        "signal confidence": {"type": "integer", "minimum": 0, "maximum": 100},
+        "promotion decision": {"type": "string", "enum": ["promote", "hold", "archive"]},
+        "sprint fit": {"type": "string", "enum": ["now", "next", "later"]},
+        "owner entity": {"type": "string", "enum": ["harald", "stratia", "myrren", "liora", "kade vox", "solan", "ellow", "orin"]},
+        "attribution": {"type": "string", "const": "bryanchasko+heraldstack"}
       },
       "additionalProperties": true
     }

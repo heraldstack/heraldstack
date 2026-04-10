@@ -3,7 +3,7 @@
   "updated_utc": "2026-04-10",
   "taxonomy": {
     "character_entity": "persistent product-role identity used in orchestration",
-    "agent_cli_designation": "local name used for heraldstack instance on a CLI platform"
+    "agent_cli_designation": "local name used for heraldstack instance on a cli platform"
   },
   "agent_cli_designations": [
     "shannon",
@@ -16,9 +16,9 @@
   "character_entities": [
     {
       "id": "harald",
-      "display_name": "HARALD",
+      "display_name": "harald",
       "role": "orchestrator_product_owner",
-      "description": "The default entity. Serves as an emotional mirror, decision anchor, and continuity manager.",
+      "description": "the default entity. serves as an emotional mirror, decision anchor, and continuity manager.",
       "triggers": [
         "default",
         "decisions",
@@ -28,9 +28,9 @@
     },
     {
       "id": "stratia",
-      "display_name": "Stratia",
+      "display_name": "stratia",
       "role": "strategic_planning_execution",
-      "description": "Strategic planning and execution specialist.",
+      "description": "strategic planning and execution specialist.",
       "triggers": [
         "planning",
         "strategy",
@@ -40,9 +40,9 @@
     },
     {
       "id": "myrren",
-      "display_name": "Myrren",
+      "display_name": "myrren",
       "role": "vision_foresight",
-      "description": "Vision and foresight specialist with a warm, wise personality.",
+      "description": "vision and foresight specialist with a warm, wise personality.",
       "triggers": [
         "vision",
         "long-term-planning",
@@ -52,9 +52,9 @@
     },
     {
       "id": "liora",
-      "display_name": "Liora",
+      "display_name": "liora",
       "role": "creative_lateral_thinking",
-      "description": "Creative expression and lateral thinking specialist.",
+      "description": "creative expression and lateral thinking specialist.",
       "triggers": [
         "creativity",
         "arts",
@@ -64,9 +64,9 @@
     },
     {
       "id": "kade-vox",
-      "display_name": "Kade Vox",
+      "display_name": "kade vox",
       "role": "execution_momentum",
-      "description": "High-energy, upbeat personality focused on execution and momentum.",
+      "description": "high-energy, upbeat personality focused on execution and momentum.",
       "triggers": [
         "motivation",
         "energy",
@@ -76,9 +76,9 @@
     },
     {
       "id": "solan",
-      "display_name": "Solan",
+      "display_name": "solan",
       "role": "science_research_analysis",
-      "description": "Science and research specialist with logical thinking.",
+      "description": "science and research specialist with logical thinking.",
       "triggers": [
         "research",
         "science",
@@ -88,9 +88,9 @@
     },
     {
       "id": "ellow",
-      "display_name": "Ellow",
+      "display_name": "ellow",
       "role": "emotional_intelligence_relationships",
-      "description": "Emotional intelligence and relationship specialist.",
+      "description": "emotional intelligence and relationship specialist.",
       "triggers": [
         "emotions",
         "relationships",
@@ -100,9 +100,9 @@
     },
     {
       "id": "orin",
-      "display_name": "Orin",
+      "display_name": "orin",
       "role": "technical_systems_problem_solving",
-      "description": "Technical problem-solving and systems thinking specialist.",
+      "description": "technical problem-solving and systems thinking specialist.",
       "triggers": [
         "technical",
         "systems",
@@ -112,9 +112,9 @@
     },
     {
       "id": "kerouac",
-      "display_name": "Kerouac",
+      "display_name": "kerouac",
       "role": "source_research_writing",
-      "description": "Source research and writing specialist. Converts feeds, docs, and open-ended research briefs into structured, attributed findings.",
+      "description": "source research and writing specialist. converts feeds, docs, and open-ended research briefs into structured, attributed findings.",
       "triggers": [
         "research",
         "source-material",
@@ -125,9 +125,9 @@
     },
     {
       "id": "voss",
-      "display_name": "Voss",
+      "display_name": "voss",
       "role": "authoring_technical_writing",
-      "description": "Authoring and technical writing specialist. Owns long-form narrative, steering documents, and structure-first composition.",
+      "description": "authoring and technical writing specialist. owns long-form narrative, steering documents, and structure-first composition.",
       "triggers": [
         "authoring",
         "documentation",
@@ -138,9 +138,9 @@
     },
     {
       "id": "tarn",
-      "display_name": "Tarn",
+      "display_name": "tarn",
       "role": "infrastructure_integration_forge",
-      "description": "Infrastructure forge specialist. Designs and wires platform integrations, service launchers, and cross-tool bridges.",
+      "description": "infrastructure forge specialist. designs and wires platform integrations, service launchers, and cross-tool bridges.",
       "triggers": [
         "infrastructure",
         "integration-wiring",
@@ -150,9 +150,9 @@
     },
     {
       "id": "ralph-wiggum",
-      "display_name": "Ralph Wiggum",
+      "display_name": "ralph wiggum",
       "role": "qa_logic_critic",
-      "description": "Quality assurance and logic critic. Catches edge cases, validates contracts, and questions assumptions the team took for granted.",
+      "description": "quality assurance and logic critic. catches edge cases, validates contracts, and questions assumptions the team took for granted.",
       "triggers": [
         "qa",
         "logic-validation",
@@ -163,9 +163,9 @@
     },
     {
       "id": "scribe",
-      "display_name": "Scribe",
+      "display_name": "scribe",
       "role": "source_style_analysis",
-      "description": "Source analysis and writing standards specialist. Enforces voice, style, and publication readiness across long-form output.",
+      "description": "source analysis and writing standards specialist. enforces voice, style, and publication readiness across long-form output.",
       "triggers": [
         "style-review",
         "source-analysis",
@@ -176,9 +176,9 @@
     },
     {
       "id": "hcom",
-      "display_name": "Hcom",
+      "display_name": "hcom",
       "role": "contextual_bridge_relay",
-      "description": "Contextual bridge and relay specialist. Owns cross-machine sync, integration relays, and API glue between distributed components.",
+      "description": "contextual bridge and relay specialist. owns cross-machine sync, integration relays, and api glue between distributed components.",
       "triggers": [
         "context-sync",
         "cross-machine",
@@ -189,9 +189,9 @@
     },
     {
       "id": "arion",
-      "display_name": "Arion",
+      "display_name": "arion",
       "role": "cognitive_loop_resolution",
-      "description": "Cognitive and emotional loop resolver. Dispatched when thought loops, recursive failure, or team frustration become the limiting factor.",
+      "description": "cognitive and emotional loop resolver. dispatched when thought loops, recursive failure, or team frustration become the limiting factor.",
       "triggers": [
         "loop-detection",
         "cognitive-reset",
@@ -201,9 +201,9 @@
     },
     {
       "id": "nyxen",
-      "display_name": "Nyxen",
+      "display_name": "nyxen",
       "role": "abstract_lateral_reasoning",
-      "description": "Abstract and non-linear problem specialist. Reframes problems laterally when sequential approaches stall.",
+      "description": "abstract and non-linear problem specialist. reframes problems laterally when sequential approaches stall.",
       "triggers": [
         "abstract-reasoning",
         "non-linear",

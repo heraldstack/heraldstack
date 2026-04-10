@@ -3,81 +3,81 @@
   "scope": "heraldstack agile software development resources",
   "canonical_references": [
     {
-      "name": "Manifesto for Agile Software Development",
+      "name": "manifesto for agile software development",
       "url": "https://agilemanifesto.org/",
-      "why": "Primary source for Agile values and principles"
+      "why": "primary source for agile values and principles"
     },
     {
-      "name": "The Scrum Guide",
+      "name": "the scrum guide",
       "url": "https://scrumguides.org/scrum-guide.html",
-      "why": "Official Scrum definition by Ken Schwaber and Jeff Sutherland"
+      "why": "official scrum definition by ken schwaber and jeff sutherland"
     },
     {
-      "name": "Scrum.org Resource Center",
+      "name": "scrum.org resource center",
       "url": "https://www.scrum.org/resource-center",
-      "why": "Ongoing practitioner guidance and evidence-based Scrum material"
+      "why": "ongoing practitioner guidance and evidence-based scrum material"
     },
     {
-      "name": "Agile Alliance Resource Library",
+      "name": "agile alliance resource library",
       "url": "https://agilealliance.org/resources/",
-      "why": "Community-backed Agile practices and references"
+      "why": "community-backed agile practices and references"
     },
     {
-      "name": "LeSS Framework",
+      "name": "less framework",
       "url": "https://less.works/",
-      "why": "Large-scale product development practices grounded in Scrum"
+      "why": "large-scale product development practices grounded in scrum"
     }
   ],
   "mentors_and_inspirations": [
     {
-      "name": "Ken Schwaber",
-      "focus": "Scrum co-creator",
+      "name": "ken schwaber",
+      "focus": "scrum co-creator",
       "reference": "https://scrumguides.org/"
     },
     {
-      "name": "Jeff Sutherland",
-      "focus": "Scrum co-creator",
+      "name": "jeff sutherland",
+      "focus": "scrum co-creator",
       "reference": "https://scrumguides.org/"
     },
     {
-      "name": "Dave West",
-      "focus": "Product and Scrum leadership",
+      "name": "dave west",
+      "focus": "product and scrum leadership",
       "reference": "https://www.scrum.org/resources"
     },
     {
-      "name": "Martin Fowler",
-      "focus": "Agile architecture and software design",
+      "name": "martin fowler",
+      "focus": "agile architecture and software design",
       "reference": "https://martinfowler.com/"
     },
     {
-      "name": "Gene Gendel",
-      "focus": "Product operating models and LeSS",
+      "name": "gene gendel",
+      "focus": "product operating models and less",
       "reference": "https://less.works/blog"
     }
   ],
   "active_living_learning_feeds": [
     {
-      "name": "Scrum.org blog feed",
+      "name": "scrum.org blog feed",
       "feed_url": "https://www.scrum.org/resources/blog/rss.xml",
       "category": "scrum"
     },
     {
-      "name": "LeSS blog feed",
+      "name": "less blog feed",
       "feed_url": "https://less.works/blog/feed.xml",
       "category": "scaled_scrum"
     },
     {
-      "name": "InfoQ feed (Agile page links here)",
+      "name": "infoq feed (agile page links here)",
       "feed_url": "https://feed.infoq.com/",
       "category": "engineering_and_agile"
     },
     {
-      "name": "Martin Fowler feed",
+      "name": "martin fowler feed",
       "feed_url": "https://martinfowler.com/feed.atom",
       "category": "architecture_and_agile"
     },
     {
-      "name": "GitHub releases feed pattern",
+      "name": "github releases feed pattern",
       "feed_url": "https://github.com/<owner>/<repo>/releases.atom",
       "category": "toolchain_updates"
     }
@@ -138,34 +138,34 @@
   },
   "github_workflow_references": [
     {
-      "name": "GitHub Issues",
+      "name": "github issues",
       "url": "https://docs.github.com/issues",
-      "why": "Backlog item tracking and workflow states"
+      "why": "backlog item tracking and workflow states"
     },
     {
-      "name": "GitHub Projects",
+      "name": "github projects",
       "url": "https://docs.github.com/issues/planning-and-tracking-with-projects",
-      "why": "Sprint board, iteration fields, and cross-repo planning"
+      "why": "sprint board, iteration fields, and cross-repo planning"
     },
     {
-      "name": "GitHub Pull Requests",
+      "name": "github pull requests",
       "url": "https://docs.github.com/pull-requests",
-      "why": "Review, merge controls, and traceability to backlog"
+      "why": "review, merge controls, and traceability to backlog"
     },
     {
-      "name": "GitHub Actions",
+      "name": "github actions",
       "url": "https://docs.github.com/actions",
-      "why": "CI/CD policy checks and automation pipelines"
+      "why": "ci/cd policy checks and automation pipelines"
     },
     {
-      "name": "GitHub Organizations",
+      "name": "github organizations",
       "url": "https://docs.github.com/organizations",
-      "why": "Org-wide governance, roles, and standards"
+      "why": "org-wide governance, roles, and standards"
     },
     {
-      "name": "GitHub Apps",
+      "name": "github apps",
       "url": "https://docs.github.com/apps",
-      "why": "Event-driven orchestration and integration points"
+      "why": "event-driven orchestration and integration points"
     }
   ],
   "github_app_event_targets": [
@@ -192,82 +192,82 @@
   ],
   "identity_model_references": [
     {
-      "name": "Heraldstack character registry",
+      "name": "heraldstack character registry",
       "path": "docs/character-sheets/entity-registry.json",
       "purpose": "separate character entities from agent-cli designations"
     }
   ],
   "risen_framework_references": [
     {
-      "name": "RISEN framework article",
+      "name": "risen framework article",
       "url": "https://www.anthropic.com/engineering/harness-design-long-running-apps",
-      "why": "Structured behavioral contracts for long-running agent workflows"
+      "why": "structured behavioral contracts for long-running agent workflows"
     },
     {
-      "name": "ServiceNow community AI resources",
+      "name": "servicenow community ai resources",
       "url": "https://communityresources.service-now.com/ai",
-      "why": "Operational AI implementation references and community patterns"
+      "why": "operational ai implementation references and community patterns"
     }
   ],
   "github_projects_and_pr_references": [
     {
-      "name": "GitHub Projects overview",
+      "name": "github projects overview",
       "url": "https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects",
-      "why": "Project planning primitives for backlog and sprint tracking"
+      "why": "project planning primitives for backlog and sprint tracking"
     },
     {
-      "name": "GitHub changelog: evolving issues and projects",
+      "name": "github changelog: evolving issues and projects",
       "url": "https://github.blog/changelog/2025-04-09-evolving-github-issues-and-projects/",
-      "why": "Recent platform capabilities for issues/projects workflows"
+      "why": "recent platform capabilities for issues/projects workflows"
     },
     {
-      "name": "Implementing Scrum with GitHub Projects",
+      "name": "implementing scrum with github projects",
       "url": "https://www.scrum.org/resources/implementing-scrum-github-projects",
-      "why": "Scrum-specific guidance for GitHub-based execution"
+      "why": "scrum-specific guidance for github-based execution"
     },
     {
-      "name": "GitHub Issues feature page",
+      "name": "github issues feature page",
       "url": "https://github.com/features/issues",
-      "why": "Issue management features and adoption context"
+      "why": "issue management features and adoption context"
     },
     {
-      "name": "PR etiquette discussion",
+      "name": "pr etiquette discussion",
       "url": "https://stackoverflow.com/questions/9563881/etiquette-of-github-contributing-pull-requests-vs-new-issue",
-      "why": "Community norms for issue vs pull-request initiation"
+      "why": "community norms for issue vs pull-request initiation"
     }
   ],
   "local_operational_artifacts": [
     {
       "path": "specs/ingestion-pipeline-spec.md",
-      "purpose": "Signal ingestion, promotion flow, labels, and project mapping"
+      "purpose": "signal ingestion, promotion flow, labels, and project mapping"
     },
     {
       "path": "specs/promotion-criteria.schema.json",
-      "purpose": "Schema gating for promote/hold/archive decisions"
+      "purpose": "schema gating for promote/hold/archive decisions"
     },
     {
       "path": ".github/ISSUE_TEMPLATE/feed_signal.yml",
-      "purpose": "Standard issue form for feed/changelog signal capture"
+      "purpose": "standard issue form for feed/changelog signal capture"
     },
     {
       "path": ".github/config/project-fields.json",
-      "purpose": "Projects field contract for org board state sync"
+      "purpose": "projects field contract for org board state sync"
     },
     {
       "path": ".github/config/check-gates.md",
-      "purpose": "Branch check gate baseline and attribution policy"
+      "purpose": "branch check gate baseline and attribution policy"
     },
     {
       "path": ".github/config/webhook-events.json",
-      "purpose": "Webhook events and handler mapping contract"
+      "purpose": "webhook events and handler mapping contract"
     },
     {
       "path": "docs/trends-2026-decomposition.md",
-      "purpose": "Tracks 2026 trend decomposition and repo responses"
+      "purpose": "tracks 2026 trend decomposition and repo responses"
     },
     {
       "path": "docs/user-research-and-ux-standards.md",
-      "purpose": "Institutional UX research and usability standards for sprint governance"
+      "purpose": "institutional ux research and usability standards for sprint governance"
     }
   ],
   "trends_2026_focus": [
@@ -279,7 +279,7 @@
     {
       "topic": "long-running harness reliability",
       "source": "https://www.anthropic.com/engineering/harness-design-long-running-apps",
-      "repo_response": "RISEN contracts and harness charter"
+      "repo_response": "risen contracts and harness charter"
     },
     {
       "topic": "scrum on github implementation",
@@ -289,34 +289,34 @@
   ],
   "user_research_and_ux_standards": [
     {
-      "title": "Harvard Enterprise Architecture User Research Methods and Recommendations",
+      "title": "harvard enterprise architecture user research methods and recommendations",
       "url": "https://enterprisearchitecture.harvard.edu/user-research-methods-and-recommendations",
-      "focus": "Method selection and practical research planning patterns"
+      "focus": "method selection and practical research planning patterns"
     },
     {
-      "title": "Stanford Experience Standards",
+      "title": "stanford experience standards",
       "url": "https://improvement.stanford.edu/resources/experience-standards",
-      "focus": "Institutional experience quality standards"
+      "focus": "institutional experience quality standards"
     },
     {
-      "title": "Stanford Usability Principles",
+      "title": "stanford usability principles",
       "url": "https://improvement.stanford.edu/resources/usability-principles",
-      "focus": "Core usability principles for design and delivery"
+      "focus": "core usability principles for design and delivery"
     },
     {
-      "title": "Stanford IT Community 5 Steps to Start Providing Great User Experience",
+      "title": "stanford it community 5 steps to start providing great user experience",
       "url": "https://itcommunity.stanford.edu/unconference/sessions/2021/5-steps-start-providing-great-user-experience",
-      "focus": "Practical UX improvement bootstrap sequence"
+      "focus": "practical ux improvement bootstrap sequence"
     },
     {
-      "title": "MIT OCW 6.831 User Interface Design and Implementation Lecture Notes",
+      "title": "mit ocw 6.831 user interface design and implementation lecture notes",
       "url": "https://ocw.mit.edu/courses/6-831-user-interface-design-and-implementation-spring-2011/pages/lecture-notes/",
-      "focus": "Foundational UI and HCI curriculum references"
+      "focus": "foundational ui and hci curriculum references"
     },
     {
-      "title": "MIT Learn UX Topic Resource",
+      "title": "mit learn ux topic resource",
       "url": "https://next.learn.mit.edu/c/topic/arvrmrxr?resource=3857",
-      "focus": "Continuing UX learning pathway"
+      "focus": "continuing ux learning pathway"
     }
   ]
 }

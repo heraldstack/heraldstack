@@ -17,7 +17,7 @@ recommended structure:
 
 `specs/<sprint-id>/risen/<chunk-id>.md`
 
-RISEN prompt contract artifact for dispatch and evaluation consistency.
+risen prompt contract artifact for dispatch and evaluation consistency.
 
 
 `specs/examples/`

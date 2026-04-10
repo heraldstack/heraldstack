@@ -23,19 +23,19 @@ jobs:
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683  # v4.2.2
 
-      - name: Install jsonschema
+      - name: install jsonschema
         run: pip install --quiet jsonschema==4.23.0
 
-      - name: Validate promotion criteria JSON schema syntax
+      - name: validate promotion criteria json schema syntax
         run: python -m json.tool specs/promotion-criteria.schema.json >/dev/null
 
-      - name: Validate project fields JSON syntax
+      - name: validate project fields json syntax
         run: python -m json.tool .github/config/project-fields.json >/dev/null
 
-      - name: Validate webhook events JSON syntax
+      - name: validate webhook events json syntax
         run: python -m json.tool .github/config/webhook-events.json >/dev/null
 
-      - name: Validate example payloads against JSON schema
+      - name: validate example payloads against json schema
         run: |
           python - <<'PY'
           import json, sys
@@ -50,10 +50,10 @@ jobs:
               print(f"schema-ok: {f}")
           PY
 
-      - name: Validate promotion payload examples (python validator)
+      - name: validate promotion payload examples (python validator)
         run: |
           python scripts/validate_promotion_payload.py specs/examples/feed-signal.promote.example.json
           python scripts/validate_promotion_payload.py specs/examples/feed-signal.hold.example.json
 
-      - name: Ensure security baseline file exists
+      - name: ensure security baseline file exists
         run: test -f .github/config/actions-security-baseline.yml

@@ -1,10 +1,10 @@
 # heraldstack user research and ux standards
 
-this document adds user-research and usability standards to heraldstack delivery governance without changing the lightweight README style.
+this document adds user-research and usability standards to heraldstack delivery governance without changing the lightweight readme style.
 
 ## intent
 
-heraldstack planning and execution should include explicit user-research evidence before promoting experience changes into sprint commitments. standards in this file complement scrum, RISEN, and feed-signal promotion artifacts.
+heraldstack planning and execution should include explicit user-research evidence before promoting experience changes into sprint commitments. standards in this file complement scrum, risen, and feed-signal promotion artifacts.
 
 ## external standards references
 
@@ -28,11 +28,11 @@ accepted method tags are interview, survey, usability-test, heuristic-review, an
 
 all pull requests with experience impact should include before-state and after-state acceptance criteria tied to explicit usability outcomes.
 
-all sprint reviews should include a user-experience evidence segment with artifacts linked in issue comments or PR bodies.
+all sprint reviews should include a user-experience evidence segment with artifacts linked in issue comments or pr bodies.
 
 retrospectives should capture one user-experience process improvement candidate and one measurement-improvement candidate each sprint.
 
-## required sprint artifacts for ux-impacting work
+## required sprint artifacts for ux-sensitive work
 
 planning artifact must include user problem statement, user segment, method selection, sample size target, and expected confidence threshold.
 

@@ -1,8 +1,8 @@
-# Orin
+# orin
 
 identity class: character_entity
 
-description: Technical problem-solving and systems thinking specialist.
+description: technical problem-solving and systems thinking specialist.
 
 triggers: technical, systems, problems
 

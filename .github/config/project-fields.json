@@ -1,12 +1,12 @@
 {
   "project_url": "https://github.com/orgs/heraldstack/projects",
   "fields": [
-    {"name": "Signal Source", "type": "single_select", "options": ["feed", "changelog", "research"]},
-    {"name": "Signal Confidence", "type": "number"},
-    {"name": "Promotion Decision", "type": "single_select", "options": ["promote", "hold", "archive"]},
-    {"name": "Sprint Fit", "type": "single_select", "options": ["now", "next", "later"]},
-    {"name": "Owner Entity", "type": "single_select", "options": ["HARALD", "Stratia", "Myrren", "Liora", "Kade Vox", "Solan", "Ellow", "Orin"]},
-    {"name": "Attribution", "type": "single_select", "options": ["bryanchasko+heraldstack"]}
+    {"name": "signal source", "type": "single_select", "options": ["feed", "changelog", "research"]},
+    {"name": "signal confidence", "type": "number"},
+    {"name": "promotion decision", "type": "single_select", "options": ["promote", "hold", "archive"]},
+    {"name": "sprint fit", "type": "single_select", "options": ["now", "next", "later"]},
+    {"name": "owner entity", "type": "single_select", "options": ["harald", "stratia", "myrren", "liora", "kade vox", "solan", "ellow", "orin"]},
+    {"name": "attribution", "type": "single_select", "options": ["bryanchasko+heraldstack"]}
   ],
   "state_labels": [
     "state/captured",

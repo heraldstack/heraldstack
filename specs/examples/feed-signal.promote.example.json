@@ -1,9 +1,9 @@
 {
   "source_url": "https://github.blog/changelog/2025-04-09-evolving-github-issues-and-projects/",
   "signal_type": "changelog",
-  "observation": "GitHub issues and projects capabilities changed with workflow implications for sprint management.",
-  "decision_impact": "Project field semantics and issue states should be updated to keep planning and reporting accurate.",
-  "proposed_action": "Create an issue to align project fields and automation handlers with new GitHub Projects capabilities.",
+  "observation": "github issues and projects capabilities changed with workflow implications for sprint management.",
+  "decision_impact": "project field semantics and issue states should be updated to keep planning and reporting accurate.",
+  "proposed_action": "create an issue to align project fields and automation handlers with new github projects capabilities.",
   "confidence": 82,
   "priority": "p1",
   "promotion_decision": "promote",
@@ -17,11 +17,11 @@
     "priority/p1"
   ],
   "project_fields": {
-    "Signal Source": "changelog",
-    "Signal Confidence": 82,
-    "Promotion Decision": "promote",
-    "Sprint Fit": "next",
-    "Owner Entity": "Orin",
-    "Attribution": "bryanchasko+heraldstack"
+    "signal source": "changelog",
+    "signal confidence": 82,
+    "promotion decision": "promote",
+    "sprint fit": "next",
+    "owner entity": "orin",
+    "attribution": "bryanchasko+heraldstack"
   }
 }

@@ -10,7 +10,7 @@ stage `captured`: feed item ingested with source metadata and dedupe fingerprint
 
 stage `triaged`: relevance and confidence assessed by assigned entity.
 
-stage `promoted`: issue created with project mapping, labels, and RISEN contract reference.
+stage `promoted`: issue created with project mapping, labels, and risen contract reference.
 
 stage `scheduled`: issue accepted into sprint iteration with owner and done criteria.
 
@@ -40,17 +40,17 @@ execution-oriented items can prefer heraldstack operator flow through orin.
 
 ## project field mapping
 
-`Signal Source`: feed|changelog|research.
+`signal source`: feed|changelog|research.
 
-`Signal Confidence`: 0-100 integer.
+`signal confidence`: 0-100 integer.
 
-`Promotion Decision`: promote|hold|archive.
+`promotion decision`: promote|hold|archive.
 
-`Sprint Fit`: now|next|later.
+`sprint fit`: now|next|later.
 
-`Owner Entity`: HARALD|Stratia|Myrren|Liora|Kade Vox|Solan|Ellow|Orin.
+`owner entity`: harald|stratia|myrren|liora|kade vox|solan|ellow|orin.
 
-`Attribution`: bryanchasko+heraldstack.
+`attribution`: bryanchasko+heraldstack.
 
 ## changelog promotion process
 
