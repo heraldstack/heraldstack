@@ -18,7 +18,7 @@ MCP tool permissions must be listed individually (e.g., `mcp__valkey__string_get
 1. **Global settings own cross-project permissions.** Any tool permission needed by 2+ projects goes in `~/.claude/settings.json`, not duplicated per-project. Global and project permissions merge additively.
 2. **Project settings own MCP server enablement.** Each project's `.claude/settings.local.json` declares which MCP servers from its `.mcp.json` are active. Tool permissions for those servers live in global settings.
 3. **No stale cruft.** Project settings must not accumulate one-off Bash permission entries. `Bash(*)` in global covers all Bash commands. `WebFetch(*)` in global covers all domains.
-4. **Read permissions are project-scoped.** Cross-repo reads (e.g., `Read(//home/bryanchasko/code/heraldstack/**)`) stay in project settings because they represent an intentional scope decision.
+4. **Read permissions are project-scoped.** Cross-repo reads (e.g., `Read(/~/code/heraldstack/**)`) stay in project settings because they represent an intentional scope decision.
 5. **enabledMcpjsonServers must match .mcp.json keys exactly.** Every server key in `.mcp.json` must appear in `enabledMcpjsonServers`, and vice versa. No orphans in either direction.
 
 ## Global Settings (`~/.claude/settings.json`)
@@ -43,7 +43,7 @@ Minimal per-project. Only contains:
 ```json
 {
   "permissions": {
-    "allow": ["Read(//home/bryanchasko/code/heraldstack/**)"]
+    "allow": ["Read(/~/code/heraldstack/**)"]
   },
   "enabledMcpjsonServers": [
     "github",
