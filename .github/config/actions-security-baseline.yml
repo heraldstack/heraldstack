@@ -1,0 +1,32 @@
+# documentation-only policy document — this is NOT a github actions workflow
+# and is not executed by any runner. it captures the intended security baseline
+# for workflows in this repo. enforcement lives in docs-schema-validate.yml and
+# in branch protection settings. edits here should be paired with matching
+# changes to the actual workflow files and protected branch rules.
+
+name: actions-security-baseline
+
+requirements:
+  pin_actions_by_sha: true
+  restrict_third_party_actions: true
+  require_minimal_permissions: true
+  require_oidc_for_cloud_auth: true
+  block_plaintext_long_lived_cloud_keys: true
+
+runner_policy:
+  github_hosted_allowed: true
+  self_hosted_allowed: true
+  self_hosted_min_runner_version: "2.329.0"
+
+oidc_policy:
+  require_audience_binding: true
+  require_repository_binding: true
+  recommend_custom_claims_and_properties: true
+
+artifact_policy:
+  retain_validation_artifacts_days: 30
+  require_checksum_for_release_assets: true
+
+review_policy:
+  required_reviewers_for_workflow_changes: 2
+  require_bryanchasko_and_heraldstack_attribution: true

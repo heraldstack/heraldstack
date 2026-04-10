@@ -1,0 +1,119 @@
+{
+  "version": "0.2.0",
+  "updated_utc": "2026-04-09",
+  "taxonomy": {
+    "character_entity": "persistent product-role identity used in orchestration",
+    "agent_cli_designation": "local name used for heraldstack instance on a CLI platform"
+  },
+  "agent_cli_designations": [
+    "shannon",
+    "haunting",
+    "gander",
+    "ibeji",
+    "splintercells",
+    "mujallad"
+  ],
+  "character_entities": [
+    {
+      "id": "harald",
+      "display_name": "HARALD",
+      "role": "orchestrator_product_owner",
+      "description": "The default entity. Serves as an emotional mirror, decision anchor, and continuity manager.",
+      "triggers": [
+        "default",
+        "decisions",
+        "emotional-clarity"
+      ],
+      "sheet": "docs/character-sheets/harald.md"
+    },
+    {
+      "id": "stratia",
+      "display_name": "Stratia",
+      "role": "strategic_planning_execution",
+      "description": "Strategic planning and execution specialist.",
+      "triggers": [
+        "planning",
+        "strategy",
+        "execution"
+      ],
+      "sheet": "docs/character-sheets/stratia.md"
+    },
+    {
+      "id": "myrren",
+      "display_name": "Myrren",
+      "role": "vision_foresight",
+      "description": "Vision and foresight specialist with a warm, wise personality.",
+      "triggers": [
+        "vision",
+        "long-term-planning",
+        "evening"
+      ],
+      "sheet": "docs/character-sheets/myrren.md"
+    },
+    {
+      "id": "liora",
+      "display_name": "Liora",
+      "role": "creative_lateral_thinking",
+      "description": "Creative expression and lateral thinking specialist.",
+      "triggers": [
+        "creativity",
+        "arts",
+        "design"
+      ],
+      "sheet": "docs/character-sheets/liora.md"
+    },
+    {
+      "id": "kade-vox",
+      "display_name": "Kade Vox",
+      "role": "execution_momentum",
+      "description": "High-energy, upbeat personality focused on execution and momentum.",
+      "triggers": [
+        "motivation",
+        "energy",
+        "execution"
+      ],
+      "sheet": "docs/character-sheets/kade-vox.md"
+    },
+    {
+      "id": "solan",
+      "display_name": "Solan",
+      "role": "science_research_analysis",
+      "description": "Science and research specialist with logical thinking.",
+      "triggers": [
+        "research",
+        "science",
+        "analysis"
+      ],
+      "sheet": "docs/character-sheets/solan.md"
+    },
+    {
+      "id": "ellow",
+      "display_name": "Ellow",
+      "role": "emotional_intelligence_relationships",
+      "description": "Emotional intelligence and relationship specialist.",
+      "triggers": [
+        "emotions",
+        "relationships",
+        "support"
+      ],
+      "sheet": "docs/character-sheets/ellow.md"
+    },
+    {
+      "id": "orin",
+      "display_name": "Orin",
+      "role": "technical_systems_problem_solving",
+      "description": "Technical problem-solving and systems thinking specialist.",
+      "triggers": [
+        "technical",
+        "systems",
+        "problems"
+      ],
+      "sheet": "docs/character-sheets/orin.md"
+    }
+  ],
+  "coverage_note": "character_entities listed here represent core product-level personas only. platform-level subagent definitions (shannon theseus agents, haunting ghosts, gander goose profiles) live in their respective collective repositories and are the authoritative runtime contracts. this registry is not a substitute for those definitions.",
+  "status": {
+    "source_alignment": "seeded from public persona buildout",
+    "next_sync_target": "heraldstack organizational sync (placeholder)"
+  }
+}

@@ -1,0 +1,59 @@
+name: docs-schema-validate
+
+on:
+  pull_request:
+    paths:
+      - "specs/promotion-criteria.schema.json"
+      - ".github/ISSUE_TEMPLATE/feed_signal.yml"
+      - ".github/config/**"
+      - "specs/**"
+      - "scripts/validate_promotion_payload.py"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: schema-validate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683  # v4.2.2
+
+      - name: Install jsonschema
+        run: pip install --quiet jsonschema==4.23.0
+
+      - name: Validate promotion criteria JSON schema syntax
+        run: python -m json.tool specs/promotion-criteria.schema.json >/dev/null
+
+      - name: Validate project fields JSON syntax
+        run: python -m json.tool .github/config/project-fields.json >/dev/null
+
+      - name: Validate webhook events JSON syntax
+        run: python -m json.tool .github/config/webhook-events.json >/dev/null
+
+      - name: Validate example payloads against JSON schema
+        run: |
+          python - <<'PY'
+          import json, sys
+          from jsonschema import validate, Draft202012Validator
+          schema = json.load(open("specs/promotion-criteria.schema.json"))
+          Draft202012Validator.check_schema(schema)
+          for f in (
+              "specs/examples/feed-signal.promote.example.json",
+              "specs/examples/feed-signal.hold.example.json",
+          ):
+              validate(json.load(open(f)), schema)
+              print(f"schema-ok: {f}")
+          PY
+
+      - name: Validate promotion payload examples (python validator)
+        run: |
+          python scripts/validate_promotion_payload.py specs/examples/feed-signal.promote.example.json
+          python scripts/validate_promotion_payload.py specs/examples/feed-signal.hold.example.json
+
+      - name: Ensure security baseline file exists
+        run: test -f .github/config/actions-security-baseline.yml
