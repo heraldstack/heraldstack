@@ -193,7 +193,7 @@
   "identity_model_references": [
     {
       "name": "heraldstack character registry",
-      "path": "docs/character-sheets/entity-registry.json",
+      "path": "personas/registry.json",
       "purpose": "separate character entities from agent-cli designations"
     }
   ],

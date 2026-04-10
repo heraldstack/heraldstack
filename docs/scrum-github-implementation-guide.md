@@ -25,7 +25,7 @@ use scrum mentor as the facilitation role name in all heraldstack materials and 
 
 harald-core acts as orchestrator and product owner function. planner variant is sprint-planning only. sprint execution remains under harald-core orchestration.
 
-character entities and agent-cli designations are different identity classes. use `docs/character-sheets/entity-registry.json` as the taxonomy source of truth.
+character entities and agent-cli designations are different identity classes. use `personas/registry.json` as the taxonomy source of truth.
 
 ## scrum cadence mapped to github
 

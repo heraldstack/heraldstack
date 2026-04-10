@@ -1,0 +1,48 @@
+{
+  "version": "0.4.0",
+  "updated_utc": "2026-04-10",
+  "taxonomy": {
+    "character_entity": "persistent product-role identity used in orchestration. who the persona is",
+    "variant": "a deployment of a character_entity in a specific collective, tier, and role. what the persona does in that context",
+    "collective": "a platform-hosted group of variants (shannon, haunting, gander, ibeji, squad)",
+    "tier": "the role level within a collective (entropy/poltergeist/profile/theseus/ghost)"
+  },
+  "slug_standard": {
+    "pattern": "hs-<collective>-<tier>-<persona>-<role>",
+    "example": "hs-shannon-theseus-ellow-scrum-mentor",
+    "rationale": "hs- prefix signals heraldstack ownership. collective before tier allows fast filtering by platform. persona before role preserves the character-first ordering"
+  },
+  "collectives": [
+    "shannon",
+    "haunting",
+    "gander",
+    "ibeji",
+    "splintercells",
+    "squad"
+  ],
+  "character_entities": [
+    {"id": "harald", "sheet": "personas/harald.md"},
+    {"id": "stratia", "sheet": "personas/stratia.md"},
+    {"id": "myrren", "sheet": "personas/myrren.md"},
+    {"id": "liora", "sheet": "personas/liora.md"},
+    {"id": "kade-vox", "sheet": "personas/kade-vox.md"},
+    {"id": "solan", "sheet": "personas/solan.md"},
+    {"id": "ellow", "sheet": "personas/ellow.md"},
+    {"id": "orin", "sheet": "personas/orin.md"},
+    {"id": "kerouac", "sheet": "personas/kerouac.md"},
+    {"id": "voss", "sheet": "personas/voss.md"},
+    {"id": "tarn", "sheet": "personas/tarn.md"},
+    {"id": "ralph-wiggum", "sheet": "personas/ralph-wiggum.md"},
+    {"id": "scribe", "sheet": "personas/scribe.md"},
+    {"id": "hcom", "sheet": "personas/hcom.md"},
+    {"id": "arion", "sheet": "personas/arion.md"},
+    {"id": "nyxen", "sheet": "personas/nyxen.md"}
+  ],
+  "coverage_note": "each persona file contains full identity data in yaml frontmatter plus a markdown body. collective repos hold variant definitions (e.g. shannon-claude-code-cli/.claude/agents/hs-shannon-theseus-<persona>-<role>.md) which reference this canonical source for identity and scope only their specific duty locally",
+  "access_channels": {
+    "mcp": "qdrant-shared-knowledge collection, search by persona id",
+    "filesystem_microvm": "mount github.com/heraldstack/heraldstack read-only at /srv/heraldstack, read personas/<id>.md",
+    "github_raw": "https://raw.githubusercontent.com/heraldstack/heraldstack/main/personas/<id>.md",
+    "gh_clone": "gh repo clone heraldstack/heraldstack ~/work/heraldstack"
+  }
+}

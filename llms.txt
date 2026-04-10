@@ -1,0 +1,54 @@
+# heraldstack
+
+> heraldstack is a multi-platform ai agent collective operating across claude code (shannon), kiro (haunting), goose (gander), gemini cli (ibeji), and github copilot (squad). this repo is the canonical source of persona identity, architectural decisions, and shared patterns. collective repos hold variant duty; this repo holds character identity.
+
+## pull instructions
+
+recommended clone for agent workers:
+
+```
+gh repo clone heraldstack/heraldstack ~/work/heraldstack
+```
+
+assumed agent context:
+
+- firecracker microvm or dockerized mcp access to the repo
+- reader identity: bryanchasko or chasko-labs-linked worker
+- mcp channels available: qdrant-shared-knowledge, github-mcp, filesystem-mcp
+
+## personas
+
+canonical character identity. variant duty lives in collective repos.
+
+- [harald](personas/harald.md): anchor, orchestrator, servant leader
+- [stratia](personas/stratia.md): strategic planning, architecture, skeptical evaluation
+- [myrren](personas/myrren.md): vision, foresight, long-term planning
+- [liora](personas/liora.md): creative, lateral thinking, design
+- [kade-vox](personas/kade-vox.md): execution, momentum, security scanning
+- [solan](personas/solan.md): science, research, logical analysis
+- [ellow](personas/ellow.md): empathy, team dynamics, psychological safety
+- [orin](personas/orin.md): technical problem-solving, github operations
+- [kerouac](personas/kerouac.md): source research, feed synthesis, attributed findings
+- [voss](personas/voss.md): technical writing, long-form narrative, steering docs
+- [tarn](personas/tarn.md): infrastructure, integration wiring, cross-tool bridges
+- [ralph-wiggum](personas/ralph-wiggum.md): qa, logic critique, edge cases
+- [scribe](personas/scribe.md): writing style enforcement, publication readiness
+- [hcom](personas/hcom.md): cross-machine relay, context sync, api glue
+- [arion](personas/arion.md): cognitive loop resolution, recursive failure interruption
+- [nyxen](personas/nyxen.md): abstract reasoning, lateral reframe
+
+## specs
+
+- [ingestion pipeline](specs/ingestion-pipeline-spec.md): feed signal capture, triage, and promotion
+- [promotion criteria schema](specs/promotion-criteria.schema.json): json schema for promotion payloads
+
+## decisions
+
+- [adr-0001 persona library split](docs/adr/0001-persona-library-split.md): character identity here, variant duty in collective repos
+- [adr-0002 slug standard](docs/adr/0002-slug-standard-hs-prefix.md): hs-<collective>-<tier>-<persona>-<role> naming
+
+## collective repos
+
+- shannon (claude code): github.com/bryanchasko/shannon-claude-code-cli
+- haunting (kiro): github.com/bryanchasko/haunting-kiro-cli
+- gander (goose): github.com/bryanchasko/gander-goose-cli
