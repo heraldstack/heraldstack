@@ -1,0 +1,49 @@
+# heraldstack-infra — gitleaks config
+# extends the bundled default ruleset with heraldstack-specific patterns
+# docs: https://github.com/gitleaks/gitleaks
+
+[extend]
+useDefault = true
+
+# -- heraldstack-specific rules ----------------------------------------
+
+[[rules]]
+id = "heraldstack-internal-lan-ip"
+description = "heraldstack internal LAN IP — should not appear in public repos or example files"
+regex = '''\b192\.168\.4\.\d{1,3}\b'''
+tags = ["heraldstack", "network", "recon"]
+
+[[rules]]
+id = "heraldstack-user-host-path"
+description = "heraldstack service account @ rocmbox host path — identifies infrastructure layout"
+regex = '''\b(bryanchasko|hs-[a-z]+)@(rocm-aibox|rocmbox|macmini|aibox)\b'''
+tags = ["heraldstack", "recon"]
+
+[[rules]]
+id = "heraldstack-home-path"
+description = "hardcoded /home/bryanchasko path — username leak"
+regex = '''/home/bryanchasko(/|$|\b)'''
+tags = ["heraldstack", "recon"]
+
+# -- global allowlist --------------------------------------------------
+# paths / patterns where heraldstack rules must not fire
+
+[allowlist]
+description = "global allowlist for heraldstack-infra"
+
+paths = [
+  # documentation that legitimately references the internal topology
+  '''(?i)hardening/.*\.md$''',
+  '''(?i)^readme\.md$''',
+  # this config itself contains the patterns by definition
+  '''\.gitleaks\.toml$''',
+  # nftables config is expected to contain the LAN subnet
+  '''hardening/nftables\.conf$''',
+  '''hardening/sshd-.*\.conf$''',
+  # hardening installer scripts reference the LAN IP during post-install verify
+  '''hardening/.*\.sh$''',
+  # docker-compose dual-binds every service to localhost + the LAN IP
+  '''^docker-compose\.ya?ml$''',
+]
+
+# commits/fingerprints grandfathered via .gitleaksignore (managed separately)
