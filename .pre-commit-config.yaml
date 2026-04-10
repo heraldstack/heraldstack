@@ -1,0 +1,15 @@
+# heraldstack-infra pre-commit config
+#
+# narrow-scope: only gitleaks for now. broader formatter stack
+# (biome/prettier/ruff/shfmt) is already covered by scripts/autoformat.sh
+# which runs via the claude code PostToolUse hook. adding those hooks
+# here would create a double-format path and slow every commit.
+#
+# to expand: merge entries from pre-commit-config-template.yaml as
+# needed once the formatter stack is consolidated.
+
+repos:
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.30.1
+    hooks:
+      - id: gitleaks
