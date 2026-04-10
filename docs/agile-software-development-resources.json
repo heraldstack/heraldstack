@@ -1,5 +1,5 @@
 {
-  "last_updated_utc": "2026-04-09",
+  "last_updated_utc": "2026-04-10T00:00:00Z",
   "scope": "heraldstack agile software development resources",
   "canonical_references": [
     {
@@ -264,6 +264,10 @@
     {
       "path": "docs/trends-2026-decomposition.md",
       "purpose": "Tracks 2026 trend decomposition and repo responses"
+    },
+    {
+      "path": "docs/user-research-and-ux-standards.md",
+      "purpose": "Institutional UX research and usability standards for sprint governance"
     }
   ],
   "trends_2026_focus": [
@@ -281,6 +285,38 @@
       "topic": "scrum on github implementation",
       "source": "https://www.scrum.org/resources/implementing-scrum-github-projects",
       "repo_response": "scrum-github implementation guide and issue/project mappings"
+    }
+  ],
+  "user_research_and_ux_standards": [
+    {
+      "title": "Harvard Enterprise Architecture User Research Methods and Recommendations",
+      "url": "https://enterprisearchitecture.harvard.edu/user-research-methods-and-recommendations",
+      "focus": "Method selection and practical research planning patterns"
+    },
+    {
+      "title": "Stanford Experience Standards",
+      "url": "https://improvement.stanford.edu/resources/experience-standards",
+      "focus": "Institutional experience quality standards"
+    },
+    {
+      "title": "Stanford Usability Principles",
+      "url": "https://improvement.stanford.edu/resources/usability-principles",
+      "focus": "Core usability principles for design and delivery"
+    },
+    {
+      "title": "Stanford IT Community 5 Steps to Start Providing Great User Experience",
+      "url": "https://itcommunity.stanford.edu/unconference/sessions/2021/5-steps-start-providing-great-user-experience",
+      "focus": "Practical UX improvement bootstrap sequence"
+    },
+    {
+      "title": "MIT OCW 6.831 User Interface Design and Implementation Lecture Notes",
+      "url": "https://ocw.mit.edu/courses/6-831-user-interface-design-and-implementation-spring-2011/pages/lecture-notes/",
+      "focus": "Foundational UI and HCI curriculum references"
+    },
+    {
+      "title": "MIT Learn UX Topic Resource",
+      "url": "https://next.learn.mit.edu/c/topic/arvrmrxr?resource=3857",
+      "focus": "Continuing UX learning pathway"
     }
   ]
 }

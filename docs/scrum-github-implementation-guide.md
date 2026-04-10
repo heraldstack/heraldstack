@@ -5,6 +5,7 @@ this guide operationalizes scrum for heraldstack using github-native execution. 
 resource manifest: `docs/agile-software-development-resources.json`.
 charter: `docs/heraldstack-harness-charter.md`.
 trend decomposition: `docs/trends-2026-decomposition.md`.
+ux standards: `docs/user-research-and-ux-standards.md`.
 
 ## source references
 
@@ -113,3 +114,11 @@ standard process references: `specs/ingestion-pipeline-spec.md`, `specs/promotio
 state transitions should be enforced via labels and project field sync for captured, triaged, promoted, scheduled, completed, and archived states.
 
 joint attribution policy requires both bryanchasko and heraldstack on feed-promoted work items in chasko-labs.
+
+## user research and usability standards integration
+
+for ux-impacting backlog items, include user-research method tag and evidence summary before scheduling work.
+
+preferred methods are interview, survey, usability-test, heuristic-review, analytics-trace, field-observation, and comparative-benchmark.
+
+review and retrospective artifacts should include measured experience outcomes and one process improvement candidate for the next sprint.

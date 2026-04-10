@@ -52,6 +52,7 @@ simplify. study similar problems. shift perspective. decompose into atoms. solve
 | specs/ingestion-pipeline-spec.md | Feed-to-issue promotion pipeline and state contract |
 | specs/promotion-criteria.schema.json | Promotion criteria schema for signal-to-issue gating |
 | docs/trends-2026-decomposition.md | 2026 trends and decomposition into repo standards |
+| docs/user-research-and-ux-standards.md | UX research and usability standards for sprint governance |
 
 ## links
 
