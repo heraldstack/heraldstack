@@ -12,7 +12,9 @@ operational patterns observed across heraldstack collectives. patterns here are 
 | [dual-identity-pr-pattern](dual-identity-pr-pattern.md) | shannon | commit under service account, review under human account — psych-safe separation for agentic prs |
 | [hook-governance-pattern](hook-governance-pattern.md) | shannon | when to use hooks vs in-agent logic, hook scoping, failure recovery |
 | [lazy-context-pattern](lazy-context-pattern.md) | shannon | defer context loading until the moment it is load-bearing, never pre-read speculative files |
+| [partition-by-intent-pr-pattern](partition-by-intent-pr-pattern.md) | shannon | group dirty files by intent and open one pr per intent — zero data loss, zero mashups |
 | [permissions-standard](permissions-standard.md) | shannon | permissionMode defaults per agent tier, write-access policy, disallowedTools matrix |
+| [worktree-isolation-scope-pattern](worktree-isolation-scope-pattern.md) | shannon | agents with `isolation: worktree` bind to their defining repo — cross-repo ops run inline |
 
 ## origin note
 
