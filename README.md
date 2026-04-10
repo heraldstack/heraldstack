@@ -41,14 +41,21 @@ canonical character identity lives in [personas/](personas/). variant duty lives
 
 ## heraldstack on different agentic cli
 
-| name | platform |
-|------|----------|
-| **shannon** | claude code cli |
-| **haunting** | kiro cli | 
-| **gander** | goose cli | 
-| **ibeji** | gemini cli | 
-| **splintercells** | langchain deep agents |
-| **mujallad** | codex cli |
+| name | platform | repo |
+|---|---|---|
+| **shannon** | claude code cli | [BryanChasko/shannon-claude-code-cli](https://github.com/BryanChasko/shannon-claude-code-cli) |
+| **haunting** | kiro cli | [BryanChasko/haunting-kiro-cli](https://github.com/BryanChasko/haunting-kiro-cli) |
+| **gander** | goose cli | [BryanChasko/gander-goose-cli](https://github.com/BryanChasko/gander-goose-cli) |
+| **ibeji** | gemini cli | [BryanChasko/ibeji-gemini-cli](https://github.com/BryanChasko/ibeji-gemini-cli) |
+| **splintercells** | langchain deep agents | [BryanChasko/splintercells-deep-agents-cli](https://github.com/BryanChasko/splintercells-deep-agents-cli) |
+| **mujallad** | codex cli | [chasko-labs/mujallad-codex-cli](https://github.com/chasko-labs/mujallad-codex-cli) |
+| **squadron** | github copilot (brady gaster subagent config method) | [chasko-labs/squadron-github-copilot-cli](https://github.com/chasko-labs/squadron-github-copilot-cli) |
+
+## who is heraldstack
+
+heraldstack and [BryanChasko](https://github.com/BryanChasko) are cybernetic — a human + ai bonded identity that operates this project jointly. [heraldstack](https://github.com/heraldstack) is the developer account that carries agent-authored commits and the shared persona library; BryanChasko is the human operator who anchors vision, reviews, and merges.
+
+this repo (github.com/heraldstack/heraldstack) is the **canonical source**. the org-owned [chasko-labs/heraldstack](https://github.com/chasko-labs/heraldstack) mirror exists but points back here.
 
 ## running on
 

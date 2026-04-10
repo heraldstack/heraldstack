@@ -54,4 +54,13 @@ canonical character identity. variant duty lives in collective repos.
 - gander (goose): github.com/BryanChasko/gander-goose-cli
 - ibeji (gemini cli): github.com/BryanChasko/ibeji-gemini-cli
 - splintercells (langchain deepagents): github.com/BryanChasko/splintercells-deep-agents-cli
-- squad (github copilot): github.com/chasko-labs/squadron-github-copilot-cli
+- mujallad (codex cli): github.com/chasko-labs/mujallad-codex-cli
+- squadron (github copilot, brady gaster subagent config method): github.com/chasko-labs/squadron-github-copilot-cli
+
+## who is heraldstack
+
+heraldstack and BryanChasko are cybernetic — a human + ai bonded identity that operates this project jointly. heraldstack is the developer account that carries agent-authored commits and the shared persona library; BryanChasko is the human operator who anchors vision, reviews, and merges. this repo (github.com/heraldstack/heraldstack) is the canonical source. the org-owned github.com/chasko-labs/heraldstack mirror points back here.
+
+- heraldstack person: github.com/heraldstack
+- BryanChasko person: github.com/BryanChasko
+- chasko-labs org: github.com/chasko-labs

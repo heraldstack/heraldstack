@@ -24,12 +24,14 @@ hs-<collective>-<tier>-<persona>-<role>
 **components**
 
 - `hs-` — literal prefix, signals heraldstack ownership and keeps the repo namespace identifiable in search results
-- `<collective>` — shannon, haunting, gander, ibeji, splintercells, squad
+- `<collective>` — shannon, haunting, gander, ibeji, splintercells, mujallad, squadron
 - `<tier>` — role level within the collective
   - shannon: entropy (primary session), theseus (subagent)
   - haunting: poltergeist (primary orchestrator), ghost (discrete subagent)
   - gander: profile (goose profile)
-  - ibeji, splintercells, squad: tbd
+  - mujallad: codex-cli profile
+  - squadron: subagent configs (brady gaster pattern)
+  - ibeji, splintercells: tbd
 - `<persona>` — lowercase character id from `personas/registry.json`
 - `<role>` — hyphenated role slug (e.g. `github-ops`, `scrum-mentor`, `technical-writer`)
 

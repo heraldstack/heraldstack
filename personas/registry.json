@@ -13,12 +13,13 @@
     "rationale": "hs- prefix signals heraldstack ownership. collective before tier allows fast filtering by platform. persona before role preserves the character-first ordering"
   },
   "collectives": [
-    "shannon",
-    "haunting",
-    "gander",
-    "ibeji",
-    "splintercells",
-    "squad"
+    {"name": "shannon", "platform": "claude code cli", "repo": "github.com/BryanChasko/shannon-claude-code-cli"},
+    {"name": "haunting", "platform": "kiro cli", "repo": "github.com/BryanChasko/haunting-kiro-cli"},
+    {"name": "gander", "platform": "goose cli", "repo": "github.com/BryanChasko/gander-goose-cli"},
+    {"name": "ibeji", "platform": "gemini cli", "repo": "github.com/BryanChasko/ibeji-gemini-cli"},
+    {"name": "splintercells", "platform": "langchain deep agents", "repo": "github.com/BryanChasko/splintercells-deep-agents-cli"},
+    {"name": "mujallad", "platform": "codex cli", "repo": "github.com/chasko-labs/mujallad-codex-cli"},
+    {"name": "squadron", "platform": "github copilot (brady gaster subagent config method)", "repo": "github.com/chasko-labs/squadron-github-copilot-cli"}
   ],
   "character_entities": [
     {"id": "harald", "sheet": "personas/harald.md"},
