@@ -64,7 +64,7 @@
       "minItems": 3,
       "items": {"type": "string"},
       "allOf": [
-        {"contains": {"const": "signal/feed"}},
+        {"contains": {"pattern": "^signal/"}},
         {"contains": {"pattern": "^state/"}},
         {"contains": {"pattern": "^priority/"}}
       ]

@@ -63,7 +63,7 @@ body:
     id: attribution
     attributes:
       label: Joint attribution
-      description: Both identities are required for heraldstack work in chasko-labs
+      description: Both identities are required for heraldstack work
       options:
         - label: attribute to bryanchasko
           required: true

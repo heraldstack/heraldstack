@@ -1,3 +1,9 @@
+# documentation-only policy document — this is NOT a github actions workflow
+# and is not executed by any runner. it captures the intended security baseline
+# for workflows in this repo. enforcement lives in docs-schema-validate.yml and
+# in branch protection settings. edits here should be paired with matching
+# changes to the actual workflow files and protected branch rules.
+
 name: actions-security-baseline
 
 requirements:

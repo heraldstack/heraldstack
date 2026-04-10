@@ -42,6 +42,6 @@ repo implementation: `specs/promotion-criteria.schema.json`, `.github/ISSUE_TEMP
 
 add a branch-protection setup script using the github api and the gate baseline in `.github/config/check-gates.md`.
 
-add automated project-field sync checks against `https://github.com/orgs/chasko-labs/projects/1` through a github app or cli task.
+add automated project-field sync checks against the contributing organization's project board through a github app or cli task.
 
 add nightly validation for feed freshness and stale triage items with automatic `state/triaged` aging alerts.

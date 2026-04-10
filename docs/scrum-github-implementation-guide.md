@@ -113,7 +113,7 @@ standard process references: `specs/ingestion-pipeline-spec.md`, `specs/promotio
 
 state transitions should be enforced via labels and project field sync for captured, triaged, promoted, scheduled, completed, and archived states.
 
-joint attribution policy requires both bryanchasko and heraldstack on feed-promoted work items in chasko-labs.
+joint attribution policy requires both bryanchasko and heraldstack on feed-promoted work items in the contributing organization.
 
 ## user research and usability standards integration
 

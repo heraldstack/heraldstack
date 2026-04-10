@@ -1,8 +1,8 @@
 # heraldstack feed ingestion and promotion pipeline spec
 
-this spec standardizes how learning signals become github work in chasko-labs.
+this spec standardizes how learning signals become github work in the contributing organization.
 
-project board target: `https://github.com/orgs/chasko-labs/projects/1`
+project board target: `https://github.com/orgs/heraldstack/projects`
 
 ## pipeline stages
 

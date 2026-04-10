@@ -1,5 +1,5 @@
 {
-  "project_url": "https://github.com/orgs/chasko-labs/projects/1",
+  "project_url": "https://github.com/orgs/heraldstack/projects",
   "fields": [
     {"name": "Signal Source", "type": "single_select", "options": ["feed", "changelog", "research"]},
     {"name": "Signal Confidence", "type": "number"},

@@ -251,7 +251,7 @@
     },
     {
       "path": ".github/config/project-fields.json",
-      "purpose": "Projects field contract for chasko-labs board state sync"
+      "purpose": "Projects field contract for org board state sync"
     },
     {
       "path": ".github/config/check-gates.md",

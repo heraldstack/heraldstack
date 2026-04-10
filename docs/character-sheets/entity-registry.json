@@ -111,8 +111,9 @@
       "sheet": "docs/character-sheets/orin.md"
     }
   ],
+  "coverage_note": "character_entities listed here represent core product-level personas only. platform-level subagent definitions (shannon theseus agents, haunting ghosts, gander goose profiles) live in their respective collective repositories and are the authoritative runtime contracts. this registry is not a substitute for those definitions.",
   "status": {
-    "source_alignment": "seeded from user-provided ux persona buildout",
-    "next_sync_target": "chasko-labs/heraldstack-core/ai-entities"
+    "source_alignment": "seeded from public persona buildout",
+    "next_sync_target": "heraldstack organizational sync (placeholder)"
   }
 }
