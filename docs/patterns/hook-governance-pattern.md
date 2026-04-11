@@ -165,8 +165,70 @@ matcher syntax is a pipe-separated substring match against the tool name. `Edit|
 - [ ] test: verify a theseus subagent is NOT blocked — check is_subagent detection or create a lock file manually
 - [ ] test: run autoformat by writing a deliberately un-formatted file; confirm prettier runs; confirm eslint errors surface as additionalContext if any remain
 
+---
+
+### 4. session-start halt/warn pattern
+
+**event:** `SessionStart` hook — runs before any agent turn
+
+**purpose:** surface critical infrastructure failures as hard blocks or amber warnings at session open, before the agent attempts any tool call that depends on those services.
+
+**problem it solves:** an agent that discovers a downed MCP server mid-task fails with a cryptic tool error, often after spending turns trying to recover. surfacing the failure at session start lets the operator fix it before wasting context.
+
+**behavior — two tiers:**
+
+- **halt (systemMessage):** for services the agent cannot function without. emit a `systemMessage` JSON object to stdout. Claude Code renders it as a system notice before the first agent turn.
+- **warn (print to stderr):** for services that are degraded but not blocking. operator sees it in the terminal without interrupting the session.
+
+**implementation:**
+
+```bash
+#!/usr/bin/env bash
+# session-start.sh — fired by SessionStart hook
+
+check_port() {
+  nc -z -w2 localhost "$1" 2>/dev/null
+}
+
+# critical: qdrant-shared must be reachable for memory ops
+if ! check_port 8102; then
+  echo '{"type":"systemMessage","message":"qdrant-shared MCP (port 8102) is DOWN — memory reads/writes will fail. run infra-up.sh before continuing."}'
+fi
+
+# critical: valkey must be reachable for session state
+if ! check_port 8110; then
+  echo '{"type":"systemMessage","message":"valkey MCP (port 8110) is DOWN — session state and rate-limit tracking unavailable. run infra-up.sh before continuing."}'
+fi
+
+# warn: jaeger degraded — tracing lost but not blocking
+if ! check_port 8120; then
+  echo "warn: jaeger MCP (port 8120) unreachable — traces will not be captured this session" >&2
+fi
+```
+
+**emit shape:** `systemMessage` must be valid JSON on a single line to stdout. Claude Code reads the hook's stdout and injects the message into context before the first turn. stderr output appears in the terminal only.
+
+**tiers by service type:**
+
+| service                                        | failure tier | rationale                                   |
+| ---------------------------------------------- | ------------ | ------------------------------------------- |
+| primary memory store (qdrant-shared)           | halt         | agent cannot persist or recall knowledge    |
+| session state store (valkey)                   | halt         | rate-limit tracking and caching unavailable |
+| observability (jaeger)                         | warn         | tracing lost but agent function unaffected  |
+| optional tools (pdf-reader, video-transcriber) | omit         | absence is expected in most sessions        |
+
+**applied across the heraldstack:**
+
+| repo                             | services halted on                                 | services warned on |
+| -------------------------------- | -------------------------------------------------- | ------------------ |
+| shannon-claude-code-cli          | qdrant-shared, valkey                              | jaeger             |
+| ux-testing-moodle-uploader       | qdrant-shared, valkey, chrome-devtools             | —                  |
+| chrome-extension-moodle-uploader | qdrant-shared, valkey, chrome-devtools (port 8141) | —                  |
+
+---
+
 ## reference implementation
 
 - repo: `chasko-labs/chrome-extension-moodle-uploader`
 - issue: BryanChasko/shannon-claude-code-cli#42
-- files: `.claude/hooks/harald-code-gate.sh`, `.claude/hooks/git-orin-gate.sh`, `.claude/hooks/autoformat.sh`, `.claude/settings.json`
+- files: `.claude/hooks/harald-code-gate.sh`, `.claude/hooks/git-orin-gate.sh`, `.claude/hooks/autoformat.sh`, `.claude/hooks/session-start.sh`, `.claude/settings.json`
