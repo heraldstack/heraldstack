@@ -1,0 +1,50 @@
+name: risen-contract-gate
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: risen-contract-gate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check-risen:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: verify risen alignment fields in pr body
+        env:
+          GITHUB_EVENT_PATH: ${{ github.event_path }}
+        run: |
+          python3 - <<'PY'
+          import json, sys, os, re
+
+          with open(os.environ['GITHUB_EVENT_PATH']) as f:
+              event = json.load(f)
+
+          body = event.get('pull_request', {}).get('body', '') or ''
+
+          # skip if the pr body has no risen alignment section at all
+          # (e.g. bot prs, dependabot, automated patches)
+          if '## risen alignment' not in body.lower() and 'risen alignment' not in body.lower():
+              print('info: no risen alignment section found — skipping (bot or automated pr)')
+              sys.exit(0)
+
+          fields = ['role', 'instructions', 'steps', 'expectation', 'narrowing']
+          missing = []
+          for field in fields:
+              # match "- field: <non-whitespace content>" — empty value after colon fails
+              if not re.search(rf'-\s+{field}:\s+\S', body, re.IGNORECASE):
+                  missing.append(field)
+
+          if missing:
+              print(f'error: risen alignment section present but fields missing or empty: {", ".join(missing)}')
+              print('fill all five risen fields in the pr body: role, instructions, steps, expectation, narrowing')
+              sys.exit(1)
+
+          print('ok: all risen alignment fields present and non-empty')
+          PY

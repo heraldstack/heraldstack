@@ -1,0 +1,49 @@
+name: issue-state-label-gate
+
+on:
+  pull_request:
+    types: [opened, labeled, unlabeled, synchronize, reopened]
+  issues:
+    types: [opened, labeled, unlabeled]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: issue-state-label-gate-${{ github.event_name }}-${{ github.event.number || github.event.issue.number }}
+  cancel-in-progress: true
+
+jobs:
+  check-state-label:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: verify state/* label present
+        env:
+          GITHUB_EVENT_PATH: ${{ github.event_path }}
+        run: |
+          python3 - <<'PY'
+          import json, sys, os
+
+          with open(os.environ['GITHUB_EVENT_PATH']) as f:
+              event = json.load(f)
+
+          if 'pull_request' in event:
+              labels = [l['name'] for l in event['pull_request'].get('labels', [])]
+              context = f"pr #{event['pull_request']['number']}"
+          elif 'issue' in event:
+              labels = [l['name'] for l in event['issue'].get('labels', [])]
+              context = f"issue #{event['issue']['number']}"
+          else:
+              print('warning: unrecognised event shape — skipping label check')
+              sys.exit(0)
+
+          state_labels = [l for l in labels if l.startswith('state/')]
+          if not state_labels:
+              print(f'error: {context} has no state/* label')
+              print(f'labels present: {labels or "(none)"}')
+              print('add a state/* label (e.g. state/captured, state/promoted, state/in-progress) before merging')
+              sys.exit(1)
+
+          print(f'ok: {context} state label present: {state_labels}')
+          PY

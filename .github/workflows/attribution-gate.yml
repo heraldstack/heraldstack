@@ -1,0 +1,47 @@
+name: attribution-gate
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: attribution-gate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check-attribution:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: verify attribution checkboxes
+        env:
+          GITHUB_EVENT_PATH: ${{ github.event_path }}
+        run: |
+          python3 - <<'PY'
+          import json, sys, os, re
+
+          with open(os.environ['GITHUB_EVENT_PATH']) as f:
+              event = json.load(f)
+
+          body = event.get('pull_request', {}).get('body', '') or ''
+
+          bc_ok = bool(re.search(r'-\s*\[x\].*`?bryanchasko`?', body, re.IGNORECASE))
+          hs_ok = bool(re.search(r'-\s*\[x\].*`?heraldstack`?', body, re.IGNORECASE))
+
+          errors = []
+          if not bc_ok:
+              errors.append('bryanchasko attribution checkbox not checked')
+          if not hs_ok:
+              errors.append('heraldstack attribution checkbox not checked')
+
+          if errors:
+              for e in errors:
+                  print(f'error: {e}')
+              print('check the attribution section in the pr body — both boxes must be [x]')
+              sys.exit(1)
+
+          print('ok: both attribution checkboxes checked')
+          PY
