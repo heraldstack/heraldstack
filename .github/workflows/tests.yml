@@ -1,0 +1,32 @@
+name: tests
+
+on:
+  pull_request:
+    paths:
+      - "scripts/**"
+      - "specs/**"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tests-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate-scripts:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: install deps
+        run: pip install --quiet jsonschema==4.23.0
+
+      - name: syntax check validator script
+        run: python3 -m py_compile scripts/validate_promotion_payload.py
+
+      - name: run validator against example payloads
+        run: |
+          python scripts/validate_promotion_payload.py specs/examples/feed-signal.promote.example.json
+          python scripts/validate_promotion_payload.py specs/examples/feed-signal.hold.example.json
