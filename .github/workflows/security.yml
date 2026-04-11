@@ -34,8 +34,15 @@ jobs:
 
       - name: scan for secrets (detect mode)
         run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            git fetch origin "${{ github.event.pull_request.base.ref }}"
+            LOG_OPTS="origin/${{ github.event.pull_request.base.ref }}..HEAD"
+          else
+            LOG_OPTS="HEAD~1..HEAD"
+          fi
           gitleaks detect \
             --source=. \
             --config=.gitleaks.toml \
             --redact \
+            --log-opts="${LOG_OPTS}" \
             --exit-code=1
