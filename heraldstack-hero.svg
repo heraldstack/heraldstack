@@ -2,9 +2,9 @@
   <defs>
     <style>
       @keyframes mascot-pulse {
-        0%   { filter: drop-shadow(0 0 4px #58a6ff); }
-        40%  { filter: drop-shadow(0 0 16px #58a6ff); }
-        100% { filter: drop-shadow(0 0 4px #58a6ff); }
+        0%   { filter: drop-shadow(0 0 4px #42b4ff); }
+        40%  { filter: drop-shadow(0 0 18px #42b4ff); }
+        100% { filter: drop-shadow(0 0 4px #42b4ff); }
       }
 
       @keyframes signal-arc-ripple {
@@ -24,64 +24,93 @@
       }
 
       @keyframes node-glow-blue {
-        0%, 100% { filter: drop-shadow(0 0 2px #58a6ff); fill-opacity: 0.6; }
-        33%       { filter: drop-shadow(0 0 10px #58a6ff); fill-opacity: 0.95; }
+        0%, 100% { filter: drop-shadow(0 0 2px #42b4ff); fill-opacity: 0.6; }
+        33%       { filter: drop-shadow(0 0 10px #42b4ff); fill-opacity: 0.95; }
       }
 
-      @keyframes node-glow-green {
-        0%, 100% { filter: drop-shadow(0 0 2px #7ee787); fill-opacity: 0.6; }
-        50%       { filter: drop-shadow(0 0 10px #7ee787); fill-opacity: 0.95; }
+      @keyframes node-glow-cyan {
+        0%, 100% { filter: drop-shadow(0 0 2px #75cfff); fill-opacity: 0.6; }
+        50%       { filter: drop-shadow(0 0 10px #75cfff); fill-opacity: 0.95; }
       }
 
-      @keyframes node-glow-purple {
-        0%, 100% { filter: drop-shadow(0 0 2px #d2a8ff); fill-opacity: 0.6; }
-        66%       { filter: drop-shadow(0 0 10px #d2a8ff); fill-opacity: 0.95; }
+      @keyframes node-glow-violet {
+        0%, 100% { filter: drop-shadow(0 0 2px #9060f0); fill-opacity: 0.6; }
+        66%       { filter: drop-shadow(0 0 10px #9060f0); fill-opacity: 0.95; }
       }
 
       .mascot        { animation: mascot-pulse 2.4s ease-in-out infinite; }
       .orbit-inner   { animation: orbit-inner 9s linear infinite; transform-origin: 600px 160px; }
       .orbit-outer   { animation: orbit-outer 6s linear infinite; transform-origin: 600px 160px; }
+
+      /* counter-rotate labels so text stays upright while parent ring spins */
+      .orbit-inner g text {
+        transform-box: fill-box;
+        transform-origin: center;
+        animation: label-counter-inner 9s linear infinite;
+      }
+      .orbit-outer g text {
+        transform-box: fill-box;
+        transform-origin: center;
+        animation: label-counter-outer 6s linear infinite;
+      }
+
+      @keyframes label-counter-inner {
+        from { transform: rotate(0deg); }
+        to   { transform: rotate(-360deg); }
+      }
+      @keyframes label-counter-outer {
+        from { transform: rotate(0deg); }
+        to   { transform: rotate(360deg); }
+      }
       .arc-1         { animation: signal-arc-ripple 3s ease-out infinite; }
       .arc-2         { animation: signal-arc-ripple 3s ease-out infinite; animation-delay: 1s; }
       .arc-3         { animation: signal-arc-ripple 3s ease-out infinite; animation-delay: 2s; }
 
       /* inner ring nodes */
       .n-herald      { animation: node-glow-blue   5s ease-in-out infinite; }
-      .n-stratia     { animation: node-glow-green  5s ease-in-out infinite; animation-delay: 0.6s; }
+      .n-stratia     { animation: node-glow-cyan   5s ease-in-out infinite; animation-delay: 0.6s; }
       .n-ellow       { animation: node-glow-blue   5s ease-in-out infinite; animation-delay: 1.2s; }
-      .n-orin        { animation: node-glow-green  5s ease-in-out infinite; animation-delay: 1.8s; }
+      .n-orin        { animation: node-glow-cyan   5s ease-in-out infinite; animation-delay: 1.8s; }
       .n-kerouac     { animation: node-glow-blue   5s ease-in-out infinite; animation-delay: 2.4s; }
-      .n-voss        { animation: node-glow-green  5s ease-in-out infinite; animation-delay: 3.0s; }
+      .n-voss        { animation: node-glow-cyan   5s ease-in-out infinite; animation-delay: 3.0s; }
       .n-tarn        { animation: node-glow-blue   5s ease-in-out infinite; animation-delay: 3.6s; }
-      .n-ralph       { animation: node-glow-green  5s ease-in-out infinite; animation-delay: 4.2s; }
+      .n-ralph       { animation: node-glow-cyan   5s ease-in-out infinite; animation-delay: 4.2s; }
 
       /* outer ring nodes */
-      .n-kade        { animation: node-glow-purple 5s ease-in-out infinite; }
-      .n-scribe      { animation: node-glow-green  5s ease-in-out infinite; animation-delay: 0.6s; }
-      .n-myrren      { animation: node-glow-purple 5s ease-in-out infinite; animation-delay: 1.2s; }
-      .n-liora       { animation: node-glow-green  5s ease-in-out infinite; animation-delay: 1.8s; }
-      .n-solan       { animation: node-glow-purple 5s ease-in-out infinite; animation-delay: 2.4s; }
-      .n-hcom        { animation: node-glow-green  5s ease-in-out infinite; animation-delay: 3.0s; }
-      .n-arion       { animation: node-glow-purple 5s ease-in-out infinite; animation-delay: 3.6s; }
-      .n-nyxen       { animation: node-glow-green  5s ease-in-out infinite; animation-delay: 4.2s; }
+      .n-kade        { animation: node-glow-violet 5s ease-in-out infinite; }
+      .n-scribe      { animation: node-glow-cyan   5s ease-in-out infinite; animation-delay: 0.6s; }
+      .n-myrren      { animation: node-glow-violet 5s ease-in-out infinite; animation-delay: 1.2s; }
+      .n-liora       { animation: node-glow-cyan   5s ease-in-out infinite; animation-delay: 1.8s; }
+      .n-solan       { animation: node-glow-violet 5s ease-in-out infinite; animation-delay: 2.4s; }
+      .n-hcom        { animation: node-glow-cyan   5s ease-in-out infinite; animation-delay: 3.0s; }
+      .n-arion       { animation: node-glow-violet 5s ease-in-out infinite; animation-delay: 3.6s; }
+      .n-nyxen       { animation: node-glow-cyan   5s ease-in-out infinite; animation-delay: 4.2s; }
     </style>
 
+    <!-- CDN neutral-950 → CDN dark mode surface gradient -->
     <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%"   style="stop-color: #0d1117; stop-opacity: 1;" />
-      <stop offset="100%" style="stop-color: #1a2c4a; stop-opacity: 0.2;" />
+      <stop offset="0%"   style="stop-color: #0f141a; stop-opacity: 1;" />
+      <stop offset="100%" style="stop-color: #1c2230; stop-opacity: 0.3;" />
     </linearGradient>
 
+    <!-- aurora: CDN primary blues cycling -->
     <radialGradient id="aurora-glow" cx="50%" cy="30%" r="60%">
-      <stop offset="0%" style="stop-color: #7ee787; stop-opacity: 0.15;">
-        <animate attributeName="stop-color" values="#7ee787; #58a6ff; #d2a8ff; #7ee787" dur="8s" repeatCount="indefinite" />
+      <stop offset="0%" style="stop-color: #42b4ff; stop-opacity: 0.12;">
+        <animate attributeName="stop-color" values="#42b4ff; #75cfff; #9060f0; #42b4ff" dur="8s" repeatCount="indefinite" />
       </stop>
-      <stop offset="100%" style="stop-color: #58a6ff; stop-opacity: 0;" />
+      <stop offset="100%" style="stop-color: #42b4ff; stop-opacity: 0;" />
     </radialGradient>
 
-    <!-- fox ear accent gradient -->
+    <!-- fox ear: CDN aws-orange (#f90) — the ONE warm accent -->
     <linearGradient id="ear-grad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%"   style="stop-color: #e8834a; stop-opacity: 0.95;" />
-      <stop offset="100%" style="stop-color: #c45f28; stop-opacity: 0.7;" />
+      <stop offset="0%"   style="stop-color: #ffaa00; stop-opacity: 0.98;" />
+      <stop offset="100%" style="stop-color: #cc7700; stop-opacity: 0.80;" />
+    </linearGradient>
+
+    <!-- inner ear marking (dark) -->
+    <linearGradient id="ear-inner-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   style="stop-color: #1c2230; stop-opacity: 0.9;" />
+      <stop offset="100%" style="stop-color: #0f141a; stop-opacity: 0.7;" />
     </linearGradient>
 
     <filter id="glow-filter">
@@ -93,178 +122,200 @@
     </filter>
   </defs>
 
-  <!-- dark background -->
-  <rect width="1200" height="340" fill="#0d1117"/>
+  <!-- CDN neutral-950 background -->
+  <rect width="1200" height="340" fill="#0f141a"/>
   <rect width="1200" height="340" fill="url(#bg-gradient)"/>
-  <rect width="1200" height="110" fill="url(#aurora-glow)"/>
+  <rect width="1200" height="120" fill="url(#aurora-glow)"/>
 
-  <!-- orbit track rings (faint guide circles, centered at 600,160) -->
-  <circle cx="600" cy="160" r="85"  fill="none" stroke="#58a6ff" stroke-width="0.5" stroke-dasharray="3,5" opacity="0.18"/>
-  <circle cx="600" cy="160" r="145" fill="none" stroke="#d2a8ff" stroke-width="0.5" stroke-dasharray="3,5" opacity="0.14"/>
+  <!-- orbit track rings — CDN primary-400 / violet -->
+  <circle cx="600" cy="160" r="85"  fill="none" stroke="#42b4ff" stroke-width="0.5" stroke-dasharray="3,5" opacity="0.18"/>
+  <circle cx="600" cy="160" r="128" fill="none" stroke="#9060f0" stroke-width="0.5" stroke-dasharray="3,5" opacity="0.14"/>
 
   <!-- signal arc ripples from center -->
   <g opacity="0.6">
-    <circle cx="600" cy="160" r="45"  fill="none" stroke="#58a6ff" stroke-width="1.5" class="arc-1" stroke-dasharray="141.4" stroke-dashoffset="0"/>
-    <circle cx="600" cy="160" r="65"  fill="none" stroke="#7ee787" stroke-width="1"   class="arc-2" stroke-dasharray="408.4" stroke-dashoffset="0" opacity="0.7"/>
-    <circle cx="600" cy="160" r="85"  fill="none" stroke="#d2a8ff" stroke-width="0.8" class="arc-3" stroke-dasharray="534"   stroke-dashoffset="0" opacity="0.5"/>
+    <circle cx="600" cy="160" r="45"  fill="none" stroke="#42b4ff" stroke-width="1.5" class="arc-1" stroke-dasharray="141.4" stroke-dashoffset="0"/>
+    <circle cx="600" cy="160" r="65"  fill="none" stroke="#75cfff" stroke-width="1"   class="arc-2" stroke-dasharray="408.4" stroke-dashoffset="0" opacity="0.7"/>
+    <circle cx="600" cy="160" r="85"  fill="none" stroke="#9060f0" stroke-width="0.8" class="arc-3" stroke-dasharray="534"   stroke-dashoffset="0" opacity="0.5"/>
   </g>
 
   <!-- ============================================================
-       FOX-EAR ROBOT MASCOT — center 600,160
-       geometric mech face: angular ears, visor, ^.^ smile
+       FOX-EAR ROBOT MASCOT v2 — center 600,160
+       FOX PROPORTIONS: head taller than wide, ears tall+narrow,
+       no muzzle plate, large eyes high in face, tapered snout
        ============================================================ -->
   <g class="mascot" filter="url(#glow-filter)">
 
-    <!-- left ear (fox triangle, orange fill) -->
-    <polygon points="567,105 575,128 551,128" fill="url(#ear-grad)" opacity="0.92"/>
-    <polygon points="567,110 572,127 559,127" fill="#0d1117" opacity="0.55"/>
+    <!--
+      HEAD: narrow-ish vertical profile.
+      Outer width ~56px (572-628), height ~72px (120-192)
+      Taller than wide — fox silhouette passes the blacked-out test.
+    -->
 
-    <!-- right ear (fox triangle, orange fill) -->
-    <polygon points="633,105 649,128 641,128" fill="url(#ear-grad)" opacity="0.92"/>
-    <polygon points="633,110 645,127 637,127" fill="#0d1117" opacity="0.55"/>
+    <!-- LEFT EAR: tall narrow triangle, angled outward/upward (V-spread)
+         Base on head at ~578-590, tip upper-left ~559,93
+         Height ~55px, base width ~12px — tall and pointed -->
+    <polygon points="559,93 578,128 590,128" fill="url(#ear-grad)" opacity="0.95"/>
+    <!-- inner ear mark — narrow lighter fill -->
+    <polygon points="562,100 577,126 587,126" fill="url(#ear-inner-grad)" opacity="0.65"/>
 
-    <!-- head plate -->
-    <path d="M 574 128 L 566 146 L 568 168 L 580 182 L 620 182 L 632 168 L 634 146 L 626 128 Z"
-          fill="#131c2e" stroke="#58a6ff" stroke-width="1.5" opacity="0.95"/>
+    <!-- RIGHT EAR: mirrored, angled outward-right
+         Base at ~610-622, tip upper-right ~641,93 -->
+    <polygon points="641,93 622,128 610,128" fill="url(#ear-grad)" opacity="0.95"/>
+    <!-- inner ear mark -->
+    <polygon points="638,100 623,126 613,126" fill="url(#ear-inner-grad)" opacity="0.65"/>
 
-    <!-- brow panel -->
-    <line x1="574" y1="140" x2="626" y2="140" stroke="#58a6ff" stroke-width="1" opacity="0.5"/>
+    <!-- HEAD PLATE: narrow vertical shape — more tall than wide
+         top: 120, bottom: 192, left: 574, right: 626
+         72px tall × 52px wide — definitively taller than wide
+         Tapers slightly at top where ears attach -->
+    <path d="M 578 128 L 572 142 L 571 165 L 576 182 L 600 190 L 624 182 L 629 165 L 628 142 L 622 128 Z"
+          fill="#1c2230" stroke="#42b4ff" stroke-width="1.5" opacity="0.96"/>
 
-    <!-- left visor eye -->
-    <rect x="577" y="144" width="16" height="10" rx="2" fill="#58a6ff" opacity="0.85"/>
-    <rect x="580" y="146" width="10" height="6"  rx="1" fill="#0d1117" opacity="0.6"/>
-    <circle cx="582" cy="147" r="1.5" fill="#7ee787" opacity="0.9"/>
+    <!-- brow panel line — high up at y=138 -->
+    <line x1="576" y1="138" x2="624" y2="138" stroke="#42b4ff" stroke-width="0.8" opacity="0.45"/>
 
-    <!-- right visor eye -->
-    <rect x="607" y="144" width="16" height="10" rx="2" fill="#58a6ff" opacity="0.85"/>
-    <rect x="610" y="146" width="10" height="6"  rx="1" fill="#0d1117" opacity="0.6"/>
-    <circle cx="612" cy="147" r="1.5" fill="#7ee787" opacity="0.9"/>
+    <!--
+      EYES: large, almond/rect visor, high in face (~35-45% of face area).
+      Face spans y=128 to y=190 (62px). Eyes at y=140-158 cover 18px = 29% vertical height.
+      Eyes span full width of face at 578-622 (44px wide total for both + gap).
+      Each eye: 18px wide × 14px tall — much larger than v1's 16×10.
+      Set at y=140, placing top of eye just below brow line — HIGH in face.
+    -->
 
-    <!-- muzzle plate -->
-    <rect x="584" y="160" width="32" height="14" rx="4" fill="#1a2c4a" stroke="#7ee787" stroke-width="1" opacity="0.85"/>
+    <!-- left visor eye — large, high -->
+    <rect x="575" y="141" width="19" height="14" rx="2.5" fill="#42b4ff" opacity="0.90"/>
+    <rect x="577" y="143" width="13" height="9"  rx="1.5" fill="#0f141a" opacity="0.65"/>
+    <!-- inner pupil glow: CDN primary -->
+    <circle cx="580" cy="147" r="2" fill="#75cfff" opacity="0.95"/>
 
-    <!-- ^.^ closed-smile expression -->
-    <path d="M 588 167 Q 591 171 594 167" fill="none" stroke="#7ee787" stroke-width="1.5" stroke-linecap="round"/>
-    <path d="M 606 167 Q 609 171 612 167" fill="none" stroke="#7ee787" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- right visor eye — large, high -->
+    <rect x="606" y="141" width="19" height="14" rx="2.5" fill="#42b4ff" opacity="0.90"/>
+    <rect x="608" y="143" width="13" height="9"  rx="1.5" fill="#0f141a" opacity="0.65"/>
+    <circle cx="612" cy="147" r="2" fill="#75cfff" opacity="0.95"/>
 
-    <!-- chin/neck connector -->
-    <rect x="592" y="182" width="16" height="8" rx="2" fill="#1a2c4a" stroke="#58a6ff" stroke-width="1" opacity="0.7"/>
+    <!--
+      MUZZLE: NO rectangular plate. Instead: narrow tapered snout.
+      A small pointed oval below the eye line — thin, angled to a point.
+      Width 18px, height 10px max — like a fox muzzle suggestion, not a pig plate.
+    -->
+    <!-- snout bridge — very narrow, just below mid-face -->
+    <ellipse cx="600" cy="164" rx="9" ry="6" fill="#162030" stroke="#42b4ff" stroke-width="0.6" opacity="0.70"/>
+    <!-- nose tip — small triangle at bottom of snout -->
+    <polygon points="600,171 596,167 604,167" fill="#75cfff" opacity="0.55"/>
 
-    <!-- side panel details — left -->
-    <rect x="566" y="148" width="8" height="18" rx="1" fill="#1a2c4a" stroke="#58a6ff" stroke-width="0.8" opacity="0.6"/>
-    <circle cx="570" cy="157" r="2" fill="#d2a8ff" opacity="0.7"/>
+    <!-- ^.^ closed-eye smile — on the narrow snout, NOT on a wide plate
+         two small arcs flanking center, y~168 -->
+    <path d="M 591 168 Q 593.5 172 596 168" fill="none" stroke="#75cfff" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M 604 168 Q 606.5 172 609 168" fill="none" stroke="#75cfff" stroke-width="1.5" stroke-linecap="round"/>
+
+    <!-- chin taper — narrow bottom plate -->
+    <rect x="592" y="182" width="16" height="8" rx="2" fill="#1c2230" stroke="#42b4ff" stroke-width="0.8" opacity="0.65"/>
+
+    <!-- side panel details — left, narrower -->
+    <rect x="571" y="150" width="6" height="20" rx="1" fill="#1c2230" stroke="#42b4ff" stroke-width="0.7" opacity="0.55"/>
+    <circle cx="574" cy="160" r="1.8" fill="#9060f0" opacity="0.75"/>
 
     <!-- side panel details — right -->
-    <rect x="626" y="148" width="8" height="18" rx="1" fill="#1a2c4a" stroke="#58a6ff" stroke-width="0.8" opacity="0.6"/>
-    <circle cx="630" cy="157" r="2" fill="#d2a8ff" opacity="0.7"/>
+    <rect x="623" y="150" width="6" height="20" rx="1" fill="#1c2230" stroke="#42b4ff" stroke-width="0.7" opacity="0.55"/>
+    <circle cx="626" cy="160" r="1.8" fill="#9060f0" opacity="0.75"/>
 
-    <!-- antenna -->
-    <line x1="600" y1="128" x2="600" y2="113" stroke="#58a6ff" stroke-width="1.5" opacity="0.7"/>
-    <circle cx="600" cy="111" r="2.5" fill="#7ee787" opacity="0.9"/>
+    <!-- antenna — centered, rises from top of narrow head -->
+    <line x1="600" y1="128" x2="600" y2="110" stroke="#42b4ff" stroke-width="1.5" opacity="0.75"/>
+    <circle cx="600" cy="108" r="2.5" fill="#75cfff" opacity="0.9"/>
   </g>
 
   <!-- ============================================================
        INNER ORBIT RING — 8 agents, r=85, center 600,160
-       angles offset 22.5deg; positions computed as:
-         x = 600 + 85*sin(a), y = 160 - 85*cos(a)
-       22.5° → (633, 81)   67.5° → (679,128)  112.5° → (679,192)
-       157.5° → (633,239)  202.5° → (567,239)  247.5° → (521,192)
-       292.5° → (521,128)  337.5° → (567, 81)
        ============================================================ -->
   <g class="orbit-inner">
     <g class="n-herald">
-      <circle cx="633" cy="81"  r="5" fill="#58a6ff"/>
-      <circle cx="633" cy="81"  r="8" fill="none" stroke="#58a6ff" stroke-width="1" opacity="0.4"/>
-      <text x="633" y="66" font-family="monospace" font-size="9" text-anchor="middle" fill="#58a6ff" opacity="0.85">harald</text>
+      <circle cx="633" cy="81"  r="5" fill="#42b4ff"/>
+      <circle cx="633" cy="81"  r="8" fill="none" stroke="#42b4ff" stroke-width="1" opacity="0.4"/>
+      <text x="633" y="66" font-family="monospace" font-size="9" text-anchor="middle" fill="#42b4ff" opacity="0.85">harald</text>
     </g>
     <g class="n-stratia">
-      <circle cx="679" cy="128" r="5" fill="#7ee787"/>
-      <circle cx="679" cy="128" r="8" fill="none" stroke="#7ee787" stroke-width="1" opacity="0.4"/>
-      <text x="700" y="131" font-family="monospace" font-size="9" text-anchor="start" fill="#7ee787" opacity="0.85">stratia</text>
+      <circle cx="679" cy="128" r="5" fill="#75cfff"/>
+      <circle cx="679" cy="128" r="8" fill="none" stroke="#75cfff" stroke-width="1" opacity="0.4"/>
+      <text x="700" y="131" font-family="monospace" font-size="9" text-anchor="start" fill="#75cfff" opacity="0.85">stratia</text>
     </g>
     <g class="n-ellow">
-      <circle cx="679" cy="192" r="5" fill="#58a6ff"/>
-      <circle cx="679" cy="192" r="8" fill="none" stroke="#58a6ff" stroke-width="1" opacity="0.4"/>
-      <text x="700" y="195" font-family="monospace" font-size="9" text-anchor="start" fill="#58a6ff" opacity="0.85">ellow</text>
+      <circle cx="679" cy="192" r="5" fill="#42b4ff"/>
+      <circle cx="679" cy="192" r="8" fill="none" stroke="#42b4ff" stroke-width="1" opacity="0.4"/>
+      <text x="700" y="195" font-family="monospace" font-size="9" text-anchor="start" fill="#42b4ff" opacity="0.85">ellow</text>
     </g>
     <g class="n-orin">
-      <circle cx="633" cy="239" r="5" fill="#7ee787"/>
-      <circle cx="633" cy="239" r="8" fill="none" stroke="#7ee787" stroke-width="1" opacity="0.4"/>
-      <text x="633" y="255" font-family="monospace" font-size="9" text-anchor="middle" fill="#7ee787" opacity="0.85">orin</text>
+      <circle cx="633" cy="239" r="5" fill="#75cfff"/>
+      <circle cx="633" cy="239" r="8" fill="none" stroke="#75cfff" stroke-width="1" opacity="0.4"/>
+      <text x="633" y="255" font-family="monospace" font-size="9" text-anchor="middle" fill="#75cfff" opacity="0.85">orin</text>
     </g>
     <g class="n-kerouac">
-      <circle cx="567" cy="239" r="5" fill="#58a6ff"/>
-      <circle cx="567" cy="239" r="8" fill="none" stroke="#58a6ff" stroke-width="1" opacity="0.4"/>
-      <text x="567" y="255" font-family="monospace" font-size="9" text-anchor="middle" fill="#58a6ff" opacity="0.85">kerouac</text>
+      <circle cx="567" cy="239" r="5" fill="#42b4ff"/>
+      <circle cx="567" cy="239" r="8" fill="none" stroke="#42b4ff" stroke-width="1" opacity="0.4"/>
+      <text x="567" y="255" font-family="monospace" font-size="9" text-anchor="middle" fill="#42b4ff" opacity="0.85">kerouac</text>
     </g>
     <g class="n-voss">
-      <circle cx="521" cy="192" r="5" fill="#7ee787"/>
-      <circle cx="521" cy="192" r="8" fill="none" stroke="#7ee787" stroke-width="1" opacity="0.4"/>
-      <text x="499" y="195" font-family="monospace" font-size="9" text-anchor="end" fill="#7ee787" opacity="0.85">voss</text>
+      <circle cx="521" cy="192" r="5" fill="#75cfff"/>
+      <circle cx="521" cy="192" r="8" fill="none" stroke="#75cfff" stroke-width="1" opacity="0.4"/>
+      <text x="499" y="195" font-family="monospace" font-size="9" text-anchor="end" fill="#75cfff" opacity="0.85">voss</text>
     </g>
     <g class="n-tarn">
-      <circle cx="521" cy="128" r="5" fill="#58a6ff"/>
-      <circle cx="521" cy="128" r="8" fill="none" stroke="#58a6ff" stroke-width="1" opacity="0.4"/>
-      <text x="499" y="131" font-family="monospace" font-size="9" text-anchor="end" fill="#58a6ff" opacity="0.85">tarn</text>
+      <circle cx="521" cy="128" r="5" fill="#42b4ff"/>
+      <circle cx="521" cy="128" r="8" fill="none" stroke="#42b4ff" stroke-width="1" opacity="0.4"/>
+      <text x="499" y="131" font-family="monospace" font-size="9" text-anchor="end" fill="#42b4ff" opacity="0.85">tarn</text>
     </g>
     <g class="n-ralph">
-      <circle cx="567" cy="81"  r="5" fill="#7ee787"/>
-      <circle cx="567" cy="81"  r="8" fill="none" stroke="#7ee787" stroke-width="1" opacity="0.4"/>
-      <text x="567" y="66" font-family="monospace" font-size="9" text-anchor="middle" fill="#7ee787" opacity="0.85">ralph-wiggum</text>
+      <circle cx="567" cy="81"  r="5" fill="#75cfff"/>
+      <circle cx="567" cy="81"  r="8" fill="none" stroke="#75cfff" stroke-width="1" opacity="0.4"/>
+      <text x="567" y="66" font-family="monospace" font-size="9" text-anchor="middle" fill="#75cfff" opacity="0.85">ralph-wiggum</text>
     </g>
   </g>
 
   <!-- ============================================================
        OUTER ORBIT RING — 8 agents, r=145, center 600,160
-       angles offset 22.5deg (interleave with inner ring):
-         x = 600 + 145*sin(a), y = 160 - 145*cos(a)
-       22.5° → (656, 26)   67.5° → (734,105)  112.5° → (734,215)
-       157.5° → (656,294)  202.5° → (545,294)  247.5° → (466,215)
-       292.5° → (466,105)  337.5° → (545, 26)
        ============================================================ -->
   <g class="orbit-outer">
     <g class="n-kade">
-      <circle cx="656" cy="26"  r="5" fill="#d2a8ff"/>
-      <circle cx="656" cy="26"  r="8" fill="none" stroke="#d2a8ff" stroke-width="1" opacity="0.4"/>
-      <text x="656" y="42" font-family="monospace" font-size="9" text-anchor="middle" fill="#d2a8ff" opacity="0.85">kade-vox</text>
+      <circle cx="649" cy="42"  r="5" fill="#9060f0"/>
+      <circle cx="649" cy="42"  r="8" fill="none" stroke="#9060f0" stroke-width="1" opacity="0.4"/>
+      <text x="649" y="58" font-family="monospace" font-size="9" text-anchor="middle" fill="#9060f0" opacity="0.85">kade-vox</text>
     </g>
     <g class="n-scribe">
-      <circle cx="734" cy="105" r="5" fill="#7ee787"/>
-      <circle cx="734" cy="105" r="8" fill="none" stroke="#7ee787" stroke-width="1" opacity="0.4"/>
-      <text x="756" y="108" font-family="monospace" font-size="9" text-anchor="start" fill="#7ee787" opacity="0.85">scribe</text>
+      <circle cx="718" cy="111" r="5" fill="#75cfff"/>
+      <circle cx="718" cy="111" r="8" fill="none" stroke="#75cfff" stroke-width="1" opacity="0.4"/>
+      <text x="740" y="114" font-family="monospace" font-size="9" text-anchor="start" fill="#75cfff" opacity="0.85">scribe</text>
     </g>
     <g class="n-myrren">
-      <circle cx="734" cy="215" r="5" fill="#d2a8ff"/>
-      <circle cx="734" cy="215" r="8" fill="none" stroke="#d2a8ff" stroke-width="1" opacity="0.4"/>
-      <text x="756" y="218" font-family="monospace" font-size="9" text-anchor="start" fill="#d2a8ff" opacity="0.85">myrren</text>
+      <circle cx="718" cy="209" r="5" fill="#9060f0"/>
+      <circle cx="718" cy="209" r="8" fill="none" stroke="#9060f0" stroke-width="1" opacity="0.4"/>
+      <text x="740" y="212" font-family="monospace" font-size="9" text-anchor="start" fill="#9060f0" opacity="0.85">myrren</text>
     </g>
     <g class="n-liora">
-      <circle cx="656" cy="294" r="5" fill="#7ee787"/>
-      <circle cx="656" cy="294" r="8" fill="none" stroke="#7ee787" stroke-width="1" opacity="0.4"/>
-      <text x="656" y="310" font-family="monospace" font-size="9" text-anchor="middle" fill="#7ee787" opacity="0.85">liora</text>
+      <circle cx="649" cy="278" r="5" fill="#75cfff"/>
+      <circle cx="649" cy="278" r="8" fill="none" stroke="#75cfff" stroke-width="1" opacity="0.4"/>
+      <text x="649" y="294" font-family="monospace" font-size="9" text-anchor="middle" fill="#75cfff" opacity="0.85">liora</text>
     </g>
     <g class="n-solan">
-      <circle cx="545" cy="294" r="5" fill="#d2a8ff"/>
-      <circle cx="545" cy="294" r="8" fill="none" stroke="#d2a8ff" stroke-width="1" opacity="0.4"/>
-      <text x="545" y="310" font-family="monospace" font-size="9" text-anchor="middle" fill="#d2a8ff" opacity="0.85">solan</text>
+      <circle cx="551" cy="278" r="5" fill="#9060f0"/>
+      <circle cx="551" cy="278" r="8" fill="none" stroke="#9060f0" stroke-width="1" opacity="0.4"/>
+      <text x="551" y="294" font-family="monospace" font-size="9" text-anchor="middle" fill="#9060f0" opacity="0.85">solan</text>
     </g>
     <g class="n-hcom">
-      <circle cx="466" cy="215" r="5" fill="#7ee787"/>
-      <circle cx="466" cy="215" r="8" fill="none" stroke="#7ee787" stroke-width="1" opacity="0.4"/>
-      <text x="444" y="218" font-family="monospace" font-size="9" text-anchor="end" fill="#7ee787" opacity="0.85">hcom</text>
+      <circle cx="482" cy="209" r="5" fill="#75cfff"/>
+      <circle cx="482" cy="209" r="8" fill="none" stroke="#75cfff" stroke-width="1" opacity="0.4"/>
+      <text x="460" y="212" font-family="monospace" font-size="9" text-anchor="end" fill="#75cfff" opacity="0.85">hcom</text>
     </g>
     <g class="n-arion">
-      <circle cx="466" cy="105" r="5" fill="#d2a8ff"/>
-      <circle cx="466" cy="105" r="8" fill="none" stroke="#d2a8ff" stroke-width="1" opacity="0.4"/>
-      <text x="444" y="108" font-family="monospace" font-size="9" text-anchor="end" fill="#d2a8ff" opacity="0.85">arion</text>
+      <circle cx="482" cy="111" r="5" fill="#9060f0"/>
+      <circle cx="482" cy="111" r="8" fill="none" stroke="#9060f0" stroke-width="1" opacity="0.4"/>
+      <text x="460" y="114" font-family="monospace" font-size="9" text-anchor="end" fill="#9060f0" opacity="0.85">arion</text>
     </g>
     <g class="n-nyxen">
-      <circle cx="545" cy="26"  r="5" fill="#7ee787"/>
-      <circle cx="545" cy="26"  r="8" fill="none" stroke="#7ee787" stroke-width="1" opacity="0.4"/>
-      <text x="545" y="42" font-family="monospace" font-size="9" text-anchor="middle" fill="#7ee787" opacity="0.85">nyxen</text>
+      <circle cx="551" cy="42"  r="5" fill="#75cfff"/>
+      <circle cx="551" cy="42"  r="8" fill="none" stroke="#75cfff" stroke-width="1" opacity="0.4"/>
+      <text x="551" y="58" font-family="monospace" font-size="9" text-anchor="middle" fill="#75cfff" opacity="0.85">nyxen</text>
     </g>
   </g>
 
-  <!-- heraldstack wordmark -->
-  <text x="600" y="332" font-family="monospace" font-size="22" font-weight="bold" text-anchor="middle" fill="#58a6ff" opacity="0.95" letter-spacing="2">heraldstack</text>
+  <!-- heraldstack wordmark — CDN primary-400 -->
+  <text x="600" y="332" font-family="monospace" font-size="22" font-weight="bold" text-anchor="middle" fill="#42b4ff" opacity="0.95" letter-spacing="2">heraldstack</text>
 </svg>
